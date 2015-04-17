@@ -17,3 +17,6 @@ SSH_ENV=$HOME/.ssh/environment
 PATH=/usr/local/bin:$PATH:/data1/home/cyen/git/targeting/app/node_modules/.bin
 . /usr/share/doc/git-1.8.3.1/contrib/completion/git-completion.bash
 
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export VISUAL=vim
