@@ -8,9 +8,10 @@ fi
 # User specific aliases and functions
 alias grep='grep --color'
 alias less='less -Mr'
+alias lh='ll -h'
 alias cl='clear'
 alias hi='history'
-alias lh='ls -h'
+alias lh='ll -h'
 alias du1='du -h --max-depth=1'
 alias hive='hive --hiveconf hive.cli.print.current.db=true --hiveconf hive.auto.convert.join=true --hiveconf hive.mapjoin.smalltable.filesize=200000000'
 SSH_ENV=$HOME/.ssh/environment
