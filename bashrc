@@ -8,6 +8,7 @@ fi
 # User specific aliases and functions
 alias grep='grep --color'
 alias less='less -Mr'
+alias lh='ll -h'
 alias cl='clear'
 alias hi='history'
 alias lh='ls -h'
