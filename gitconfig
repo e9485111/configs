@@ -1,0 +1,31 @@
+[user]
+  name = cyen
+	email = CYen@walmartlabs.com
+[credential]
+	helper = cache --timeout=3600
+[color]
+  ui = auto
+  diff = auto
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red
+  whitespace = red reverse
+
+[core]
+  whitespace=fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	editor = vim
+
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  re = remote
+  co = checkout
+  sb = show-branch --color=always
+  dfs = diff --staged
+  df = diff
+  ai = add --interactive
+  lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+
