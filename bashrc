@@ -19,7 +19,7 @@ SSH_ENV=$HOME/.ssh/environment
 export PYSPARK_DRIVER_PYTHON=/usr/bin/python
 #export PYSPARK_DRIVER_PYTHON=/usr/local/bin/python
 PATH=/usr/local/bin:$PATH:/data1/home/cyen/git/targeting/app/node_modules/.bin
-. /usr/share/doc/git-1.8.3.1/contrib/completion/git-completion.bash
+#. /usr/share/doc/git-1.8.3.1/contrib/completion/git-completion.bash
 
 
 alias gst='git st'
