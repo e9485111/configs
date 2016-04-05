@@ -1,0 +1,41 @@
+Host dev01 
+HostName vmktg-dev01.sv.walmartlabs.com
+Host dev02 
+HostName vmktg-dev02.sv.walmartlabs.com
+Host dev03 
+HostName vmktg-dev03.sv.walmartlabs.com
+Host dev04 
+HostName vmktg-dev04.sv.walmartlabs.com
+
+Host stg00
+HostName vmktg-stg00.sv.walmartlabs.com
+
+Host stg01
+HostName vmktg-stg01.sv.walmartlabs.com
+Host stg02
+HostName vmktg-stg02.sv.walmartlabs.com
+Host stg03
+HostName vmktg-stg03.sv.walmartlabs.com
+
+Host prod00
+HostName vmktg-prod00.sv.walmartlabs.com
+Host prod01
+HostName vmktg-prod01.sv.walmartlabs.com
+
+Host tgt-dev
+HostName targeting-vm.dev.wap-targeting.car.snv3.sv.walmartlabs.com
+
+Host tgt-dev2
+HostName targeting-vm.dev.wap-targeting.car.snv4.sv.walmartlabs.com
+
+Host cassandra
+HostName 10.93.37.204
+
+Host redis
+HostName 172.30.43.254
+
+Host git
+Hostname gecgithub01.walmart.com
+User cyen
+PubKeyAuthentication yes
+IdentityFile /Users/cyen/.ssh/gecgithub01.walmart.com_rsa.pub
