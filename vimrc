@@ -25,6 +25,9 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.js :%s/\s\+$//e
 autocmd BufWritePre *.html :%s/\s\+$//e
 autocmd BufWritePre *.tpl :%s/\s\+$//e
+"indent for python
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
+
 "compile coffee script
 autocmd BufWritePost,FileWritePost *.coffee !coffee -c <afile>
 
