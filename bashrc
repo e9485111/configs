@@ -30,3 +30,7 @@ PATH=/usr/local/bin:$PATH
 export VISUAL=vim
 
 eval "$(fasd --init auto)"
+
+export PATH="/home/cyen/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
