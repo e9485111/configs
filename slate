@@ -37,3 +37,12 @@ bind left:${h2} ${topleft}
 bind down:${h2} ${bottomleft}
 bind right:${h2} ${bottomright}
 bind up:${h2} ${topright}
+
+bind pad+:${hyper}       resize +5% +0
+bind pad-:${hyper}        resize -5% +0
+bind =:${hyper}       resize +5% +0
+bind -:${hyper}        resize -5% +0
+bind pad+:${h2}       resize +0 +5%
+bind pad-:${h2}        resize +0 -5%
+bind =:${h2}       resize +0 +5%
+bind -:${h2}        resize +0 -5%

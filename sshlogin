@@ -1,0 +1,2 @@
+scp .ssh/id_dsa.pub $1:.
+ssh $1 "cat id_dsa.pub >> .ssh/authorized_keys"
