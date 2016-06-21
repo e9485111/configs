@@ -1,4 +1,13 @@
 #!/bin/sh
+echo "Installing fasd"
+pushd .
+cd ~
+wget https://github.com/clvv/fasd/tarball/1.0.1
+tar zxvf 1.0.1
+cd clvv-fasd-4822024
+sudo make install
+popd
+
 ln -s ~/configs/vimrc ~/.vimrc
 ln -s ~/configs/tmux.conf ~/.tmux.conf
 ln -s ~/configs/bashrc ~/.bashrc
