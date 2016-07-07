@@ -5,8 +5,13 @@ onfiguration is split into the following directives:
 config defaultToCurrentScreen true
 config resizePercentOf screenSize
  
+#alias monitor-macbook 2560x1600
+#alias monitor-dell 3840 x 2160
+
+#default 2monitors resolutions:${monitor-macbook};${monitor-dell}
+#default 1monitors resolutions:${monitor-macbook}
+
 # alias (to create alias variables)
- 
 alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
 alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
@@ -14,12 +19,16 @@ alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
 alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
 alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
 alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
- 
+
+#move to the next monitor
+alias moveleft move screenOriginX;screenOriginY screenSizeX;screenSizeY left
+alias moveright move screenOriginX;screenOriginY screenSizeX;screenSizeY right
+
 alias hyper ctrl;alt
 alias h2 ctrl;alt;shift
- 
+alias h3 ctrl;alt;cmd
+
 # key bindings
- 
 bind l:${hyper}    focus right
 bind h:${hyper}     focus left
 bind k:${hyper}       focus up
@@ -33,11 +42,13 @@ bind up:${hyper} ${full}
 bind c:${hyper} push up center
 bind down:${hyper} move screenOriginX;screenOriginY screenSizeX/2;screenSizeY/2
 
+#resize to 1/4 screen size
 bind left:${h2} ${topleft}
 bind down:${h2} ${bottomleft}
 bind right:${h2} ${bottomright}
 bind up:${h2} ${topright}
 
+#adjust window size
 bind pad+:${hyper}       resize +5% +0
 bind pad-:${hyper}        resize -5% +0
 bind =:${hyper}       resize +5% +0
@@ -46,3 +57,6 @@ bind pad+:${h2}       resize +0 +5%
 bind pad-:${h2}        resize +0 -5%
 bind =:${h2}       resize +0 +5%
 bind -:${h2}        resize +0 -5%
+
+bind left:${h3} ${moveleft}
+bind right:${h3} ${moveright}
