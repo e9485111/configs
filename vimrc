@@ -75,6 +75,10 @@ map <leader>2 2gt
 map <leader>3 3gt
 map <leader>4 4gt
 map <leader>5 5gt
+map <leader>6 5gt
+map <leader>7 5gt
+map <leader>8 5gt
+map <leader>9 5gt
 map <leader>u :MRU<cr>
 map <leader>? :FufFile<cr>
 map <leader>f :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
