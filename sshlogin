@@ -1,3 +1,9 @@
 PW=pw
-sshpass -p $PW scp -o "StrictHostKeyChecking no" ~/.ssh/id_rsa.pub $1:.
-sshpass -p $PW ssh $1 "if [ ! -f ./.ssh/authorized_keys ]; then cat /dev/zero|ssh-keygen -q -N \"\"; fi; cat id_rsa.pub >> .ssh/authorized_keys; rm id_rsa.pub"
+#sshpass -p $PW scp -o "StrictHostKeyChecking no" ~/.ssh/id_rsa.pub $1:.
+#sshpass -p $PW ssh $1 "if [ ! -f ./.ssh/authorized_keys ]; then cat /dev/zero|ssh-keygen -q -N \"\"; fi; cat id_rsa.pub >> .ssh/authorized_keys; rm id_rsa.pub"
+pushd .
+cd ~
+tar zcvf ~/configs.tar.gz ./configs
+popd
+sshpass -p $PW scp ~/configs.tar.gz $1:.
+sshpass -p $PW ssh $1 "tar zxvf configs.tar.gz; rm configs.tar.gz;bash ~/configs/create_link.sh"
