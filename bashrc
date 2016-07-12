@@ -8,9 +8,8 @@ fi
 # User specific aliases and functions
 alias grep='grep --color'
 alias less='less -MS'
-alias ls='ls -G'
-alias ll='ls -lG'
-alias lh='ls -lGh'
+alias ll='ls -l'
+alias lh='ls -lh'
 alias cl='clear'
 alias j='z'
 alias vi='vim'
@@ -34,7 +33,6 @@ export VISUAL=vim
 
 eval "$(fasd --init auto)"
 
-#export PATH="/home/cyen/.pyenv/bin:$PATH"
-#eval "$(pyenv init -)"
-#eval "$(pyenv virtualenv-init -)"
-source ~/.iterm2_shell_integration.`basename $SHELL`
+export PATH="/Users/cyen/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
