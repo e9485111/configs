@@ -33,6 +33,6 @@ export VISUAL=vim
 
 eval "$(fasd --init auto)"
 
-export PATH="/Users/cyen/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+#export PATH="/Users/cyen/.pyenv/bin:$PATH"
+#eval "$(pyenv init -)"
+#eval "$(pyenv virtualenv-init -)"
