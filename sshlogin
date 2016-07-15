@@ -6,4 +6,4 @@ cd ~
 gtar zcvf ~/configs.tar.gz --exclude='./configs/.git/*' ./configs
 popd
 sshpass -p $PW scp ~/configs.tar.gz $1:.
-sshpass -p $PW ssh $1 "tar zxvf configs.tar.gz; rm configs.tar.gz;bash ~/configs/create_link.sh"
+sshpass -p $PW ssh -t $1 "tar zxvf configs.tar.gz; rm configs.tar.gz;bash ~/configs/create_link.sh;cd clvv-fasd-4822024;echo $PW|sudo -S make install; rm -rf 1.0.1 clvv-fasd-4822024"
