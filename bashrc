@@ -7,7 +7,7 @@ fi
 
 # User specific aliases and functions
 alias grep='grep --color'
-alias less='less -MS'
+alias less='less -MSr'
 alias ll='ls -l'
 alias lh='ls -lh'
 alias cl='clear'
