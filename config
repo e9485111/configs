@@ -1,5 +1,263 @@
-Host p3dev07
-HostName p3plfinddev07.prod.phx3.gdg
+Host cwytest
+  Hostname cwytest.cloud.phx3.gdg
+Host cwytest2
+  Hostname cwytest2.cloud.phx3.gdg
+Host cwytest3
+  Hostname cwytest3.cloud.phx3.gdg
+Host cwy
+  Hostname cwy.cloud.phx3.gdg
+Host my
+  Hostname chungwei.cloud.phx3.gdg
+Host ash01
+  HostName a2plfinddev01.prod.iad2.gdg
+Host deploy
+  HostName deploy.cloud.phx3.gdg
+Host hmaster
+  HostName p3plpashl01.prod.phx3.gdg
+
+Host hmaster2
+  HostName P3PLCDSS001.prod.phx3.gdg
+Host hmaster4
+  HostName p3plcdsc004.prod.phx3.gdg
+Host hmaster1
+  HostName p3plpaname02
+
+Host test-hadoop
+  HostName g1tlnebring002.test.glbt1.gdg
+
+Host dev01
+  HostName g1dlfinddev01.dev.glbt1.gdg
+
+Host dev02
+  HostName g1dlfinddev02.dev.glbt1.gdg
+
+Host dev03
+  HostName g1dlfinddev03.dev.glbt1.gdg
+
+Host dev04
+  HostName g1dlfinddev04.dev.glbt1.gdg
+
+Host dev05
+  HostName g1dlfinddev05.dev.glbt1.gdg
+
+Host buck01
+  HostName p3plfinddev01.prod.phx3.gdg
+
+Host buck02
+  HostName p3plfinddev02.prod.phx3.gdg
+
+Host buck03
+  HostName p3plfinddev03.prod.phx3.gdg
+
+Host buck04
+  HostName p3plfinddev04.prod.phx3.gdg
+
+Host buck05
+  HostName p3plfinddev05.prod.phx3.gdg
+
+Host buck06
+  HostName p3plfinddev06.prod.phx3.gdg
+
+Host buck07
+  HostName p3plfinddev07.prod.phx3.gdg
+
+Host buck08
+  HostName p3plfinddev08.prod.phx3.gdg
+
+Host buck09
+  HostName p3plfinddev09.prod.phx3.gdg
+
+Host buck10
+  HostName p3plfinddev10.prod.phx3.gdg
+
+Host mesa01
+  HostName m1plfinddev01.prod.mesa1.gdg
+Host mesa02
+  HostName m1plfinddev02.prod.mesa1.gdg
+Host mesa03
+  HostName m1plfinddev03.prod.mesa1.gdg
+Host mesa04
+  HostName m1plfinddev04.prod.mesa1.gdg
+Host mesa05
+  HostName m1plfinddev05.prod.mesa1.gdg
+Host ash01
+  HostName a2plfinddev01.prod.iad2.gdg
+
+Host build
+  HostName build.cloud.dev.phx3.gdg
+Host build2
+  HostName build2.cloud.dev.phx3.gdg
+
+Host staging
+  HostName staging.cloud.dev.phx3.gdg
+Host unstable.cloud.dev.phx3.gdg
+  HostName unstable.cloud.dev.phx3.gdg
+Host staging.cloud.dev.phx3.gdg
+  HostName staging.cloud.dev.phx3.gdg
+Host 10.22.255.227
+  HostName 10.22.255.227
+Host integration.cloud.dev.phx3.gdg
+
+Host integration
+  HostName integration.cloud.dev.phx3.gdg
+Host unstable
+  HostName unstable.cloud.dev.phx3.gdg
+Host stable
+  HostName stable.cloud.dev.phx3.gdg
+Host stable.cloud.dev.phx3.gdg
+
+Host testrunner
+  HostName test-runner.cloud.dev.phx3.gdg
+Host demo
+  HostName demo.cloud.dev.phx3.gdg
+Host ac-staging
+  HostName ac-staging.cloud.dev.phx3.gdg
+Host batch
+  HostName batch.cloud.dev.phx3.gdg
+Host dns01
+  HostName dns-prod-01.cloud.phx3.gdg
+Host dns02
+  HostName dns-prod-02.cloud.phx3.gdg
+Host dns03
+  HostName dns-prod-03.cloud.phx3.gdg
+Host dns04
+  HostName dns-prod-04.cloud.phx3.gdg
+Host dns05
+  HostName dns-prod-05.cloud.phx3.gdg
+Host dns06
+  HostName dns-prod-06.cloud.phx3.gdg
+Host redis01
+  HostName find-data-05.cloud.dev.phx3.gdg
+Host redis02
+  HostName find-data-06.cloud.dev.phx3.gdg
+Host redis03
+  HostName find-data-08.cloud.dev.phx3.gdg
+Host redis04
+  HostName find-data-09.cloud.dev.phx3.gdg
+Host redis05
+  HostName find-data-10.cloud.dev.phx3.gdg
+Host redis06
+  HostName find-data-11.cloud.dev.phx3.gdg
+Host redis07
+  HostName find-data-01.cloud.dev.phx3.gdg
+Host redis08
+  HostName find-data-02.cloud.dev.phx3.gdg
+Host redis09
+  HostName find-data-03.cloud.dev.phx3.gdg
+Host redis10
+  HostName find-data-04.cloud.dev.phx3.gdg
+Host redis11
+  HostName find-data-07.cloud.dev.phx3.gdg
+Host redis12
+  HostName find-data-12.cloud.dev.phx3.gdg
+Host acunstable
+  HostName ac-unstable.cloud.dev.phx3.gdg
+Host acintegration
+  HostName ac-integration.cloud.dev.phx3.gdg
+Host acstable
+  HostName ac-stable.cloud.dev.phx3.gdg
+Host acstaging
+  HostName ac-staging.cloud.dev.phx3.gdg
+Host trash7
+  User dakellog
+  HostName trash7.cloud.dev.phx3.gdg
+Host trash4
+  HostName trash4.cloud.dev.phx3.gdg
+Host buildshad
+  HostName build-shad.cloud.dev.phx3.gdg
+Host acstagingshad
+  HostName acstaging-shad.cloud.dev.phx3.gdg
+Host stagingshad
+  HostName staging-shad.cloud.dev.phx3.gdg
+Host ldapclient
+  User dakellog
+  HostName ldap-client.cloud.dev.phx3.gdg
+Host sensutest3
+  HostName sensu-test3.cloud.dev.phx3.gdg
+Host keynode01
+  HostName key-node-01.cloud.dev.phx3.gdg
+Host keynode02
+  HostName key-node-02.cloud.dev.phx3.gdg
+Host keynode03
+  HostName key-node-03.cloud.dev.phx3.gdg
+Host whois
+  HostName whois.cloud.dev.phx3.gdg
+Host whois01
+  HostName 10.32.43.152
+Host who
+  HostName who.cloud.dev.phx3.gdg
+Host boottest
+  HostName boottest5.cloud.dev.phx3.gdg
+Host dashboard
+  HostName dashboard.cloud.dev.phx3.gdg
+Host storm1
+  HostName storm-node-01.cloud.dev.phx3.gdg
+Host storm2
+  HostName storm-node-02.cloud.dev.phx3.gdg
+Host storm3
+  HostName storm-node-03.cloud.dev.phx3.gdg
+Host storm4
+  HostName storm-node-04.cloud.dev.phx3.gdg
+Host storm5
+  HostName storm-node-05.cloud.dev.phx3.gdg
+Host findoffline01
+  HostName find-offline-01.cloud.dev.phx3.gdg
+Host findoffline02
+  HostName find-offline-02.cloud.dev.phx3.gdg
+Host findoffline03
+  HostName find-offline-03.cloud.dev.phx3.gdg
+Host findoffline04
+  HostName find-offline-04.cloud.phx3.gdg
+Host findoffline05
+  HostName find-offline-05.cloud.dev.phx3.gdg
+Host findoffline06
+  HostName find-offline-06.cloud.dev.phx3.gdg
+Host ote
+  HostName ote.cloud.dev.phx3.gdg
+Host stats
+  HostName find-stats.cloud.dev.phx3.gdg
+Host test
+  HostName test-find.cloud.dev.phx3.gdg
+Host int
+  HostName int.cloud.dev.phx3.gdg
+Host test01
+  HostName test-gdg-01.cloud.dev.phx3.gdg
+Host test02
+  HostName test-gdg-02.cloud.dev.phx3.gdg
+Host test03
+  HostName test-gdg-03.cloud.dev.phx3.gdg
+Host test04
+  HostName test-gdg-04.cloud.phx3.gdg
+Host test05
+  HostName test-gdg-05.cloud.phx3.gdg
+Host ote01
+  HostName ote-gdg-01.cloud.dev.phx3.gdg
+Host ote02
+  HostName ote-gdg-02.cloud.dev.phx3.gdg
+Host ote03
+  HostName ote-gdg-03.cloud.dev.phx3.gdg
+Host ardb0
+  HostName ardb-00.cloud.phx3.gdg
+Host ardb1
+  HostName ardb-01.cloud.phx3.gdg
+Host ardb2
+  HostName ardb-02.cloud.phx3.gdg
+Host ardb3
+  HostName ardb-03.cloud.iad2.gdg
+Host ardb4
+  HostName ardb-04.cloud.iad2.gdg
+Host ardbrec0
+  HostName ardb-rec-00.cloud.phx3.gdg
+Host ardbrec1
+  HostName ardb-rec-01.cloud.phx3.gdg
+Host ardbrec2
+  HostName ardb-rec-02.cloud.phx3.gdg
+Host ardbrec3
+  HostName ardb-rec-03.cloud.iad2.gdg
+Host ardbrec4
+  HostName ardb-rec-04.cloud.iad2.gdg
+Host deploy
+  HostName deploy.cloud.phx3.gdg
 
 User cyen
 PubKeyAuthentication yes
