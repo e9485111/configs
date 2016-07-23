@@ -1,11 +1,11 @@
 printf "password: "
 read -s PW
-sshpass -p $PW scp -o "StrictHostKeyChecking no" ~/.ssh/id_rsa.pub $1:.
-sshpass -p $PW ssh $1 "if [ ! -f ./.ssh/authorized_keys ]; then cat /dev/zero|ssh-keygen -q -N \"\"; fi; cat id_rsa.pub >> .ssh/authorized_keys; rm id_rsa.pub; chmod 400 authorized_keys"
+#sshpass -p $PW scp -o "StrictHostKeyChecking no" ~/.ssh/id_rsa.pub $1:.
+#sshpass -p $PW ssh $1 "if [ ! -f ./.ssh/authorized_keys ]; then cat /dev/zero|ssh-keygen -q -N \"\"; fi; cat id_rsa.pub >> .ssh/authorized_keys; rm id_rsa.pub; chmod 400 authorized_keys"
 pushd .
 cd ~
 gtar zcvf ~/configs.tar.gz --exclude='./configs/.git/*' ./configs
 popd
 sshpass -p $PW scp ~/configs.tar.gz $1:.
 #install fasd
-sshpass -p $PW ssh -t $1 "tar zxvf configs.tar.gz; rm configs.tar.gz;bash ~/configs/create_link.sh;cd clvv-fasd-4822024;echo $PW|sudo -S make install; rm -rf 1.0.1 clvv-fasd-4822024"
+sshpass -p $PW ssh -t $1 "tar zxvf configs.tar.gz; rm configs.tar.gz;bash ~/configs/create_link.sh"

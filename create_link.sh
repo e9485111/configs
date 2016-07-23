@@ -24,7 +24,9 @@ then
   cd ~
   wget https://github.com/clvv/fasd/tarball/1.0.1
   tar zxvf 1.0.1
-#  cd clvv-fasd-4822024
-#  sudo make install
+  cd clvv-fasd-4822024
+  sudo make install
+  cd ..
+  rm -rf 1.0.1 clvv-fasd-4822024
   popd
 fi
