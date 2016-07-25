@@ -4,6 +4,8 @@ Host cwytest2
   Hostname cwytest2.cloud.phx3.gdg
 Host cwytest3
   Hostname cwytest3.cloud.phx3.gdg
+Host cwytest4
+  Hostname cwytest4.cloud.phx3.gdg
 Host cwy
   Hostname cwy.cloud.phx3.gdg
 Host my
@@ -21,7 +23,8 @@ Host hmaster4
   HostName p3plcdsc004.prod.phx3.gdg
 Host hmaster1
   HostName p3plpaname02
-
+Host hadoop
+  HostName p3plpashl01.prod.phx3.gdg
 Host test-hadoop
   HostName g1tlnebring002.test.glbt1.gdg
 

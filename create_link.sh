@@ -17,7 +17,7 @@ ln -s ~/configs/config ~/.ssh/config
 rm ~/.slate
 ln -s ~/configs/slate ~/.slate
 chmod go-w ~/.ssh/config
-if [ $install_fasd -eq 1 ];
+if [ ! -f /usr/local/bin/fasd ];
 then
   echo "Installing fasd"
   pushd .
@@ -29,4 +29,6 @@ then
   cd ..
   rm -rf 1.0.1 clvv-fasd-4822024
   popd
+else
+  echo "fasd already installed"
 fi
