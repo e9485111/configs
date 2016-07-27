@@ -1,7 +1,10 @@
 printf "password: "
 read -s PW
-sshpass -p $PW scp -o "StrictHostKeyChecking no" ~/.ssh/id_rsa.pub $1:.
-sshpass -p $PW ssh $1 "if [ ! -f ./.ssh/authorized_keys ]; then cat /dev/zero|ssh-keygen -q -N \"\"; fi; cat id_rsa.pub >> .ssh/authorized_keys; rm id_rsa.pub; chmod 400 authorized_keys"
+#sshpass -p $PW scp -o "StrictHostKeyChecking no" ~/.ssh/id_rsa.pub $2:.
+#sshpass -p $PW ssh $1 "if [ ! -f ./.ssh/authorized_keys ]; then cat /dev/zero|ssh-keygen -q -N \"\"; fi; cat id_rsa.pub >> .ssh/authorized_keys; rm id_rsa.pub; chmod 400 authorized_keys"
+sshpass -p $PW ssh $1 "if [ ! -d ~/.ssh/ ]; then mkdir ~/.ssh; fi"
+sshpass -p $PW scp ~/.ssh/* $1:.ssh/
+exit
 pushd .
 cd ~
 gtar zcvf ~/configs.tar.gz --exclude='./configs/.git/*' ./configs
