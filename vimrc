@@ -41,7 +41,6 @@ hi Tab gui=underline guifg=blue ctermbg=blue
 "autocmd BufRead *.py highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 "autocmd BufRead *.py match OverLength /\%81v.\+/
 
-call pathogen#infect()
 filetype plugin indent on
 filetype plugin on
 filetype indent on
@@ -49,8 +48,6 @@ filetype indent on
 let mapleader = ","
 "Fast reloading of the .vimrc
 map <leader>s :source ~/.vimrc<cr>
-"When .vimrc is edited, reload it
-autocmd! bufwritepost vimrc source ~/vim_local/vimrc
 
 "Tab configuration
 map <leader>tn :tabnew<cr>
