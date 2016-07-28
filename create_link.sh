@@ -32,3 +32,6 @@ then
 else
   echo "fasd already installed"
 fi
+echo "installing yum repo"
+sudo rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+sudo rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
