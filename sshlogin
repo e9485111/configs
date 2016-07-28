@@ -10,4 +10,4 @@ gtar zcvf ~/configs.tar.gz --exclude='./configs/.git/*' ./configs
 popd
 sshpass -p $PW scp ~/configs.tar.gz $1:.
 #install fasd
-sshpass -p $PW ssh -t $1 "tar zxvf configs.tar.gz; rm configs.tar.gz;bash ~/configs/create_link.sh"
+sshpass -p $PW ssh -t $1 "echo \"${PW}\" > /tmp/p; tar zxvf configs.tar.gz; rm configs.tar.gz;bash ~/configs/create_link.sh;rm /tmp/p"

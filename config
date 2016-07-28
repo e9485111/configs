@@ -1,3 +1,7 @@
+Host ha-redis01
+  Hostname ha-redis01.cloud.phx3.gdg
+Host ha-redis02
+  Hostname ha-redis02.cloud.phx3.gdg
 Host cwytest
   Hostname cwytest.cloud.phx3.gdg
 Host cwytest2
