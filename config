@@ -1,7 +1,3 @@
-Host ha-redis01
-  Hostname ha-redis01.cloud.phx3.gdg
-Host ha-redis02
-  Hostname ha-redis02.cloud.phx3.gdg
 Host cwytest
   Hostname cwytest.cloud.phx3.gdg
 Host cwytest2
@@ -20,6 +16,13 @@ Host deploy
   HostName deploy.cloud.phx3.gdg
 Host hmaster
   HostName p3plpashl01.prod.phx3.gdg
+
+Host kafka01
+  HostName find-kafka-01.cloud.phx3.gdg
+Host kafka02
+  HostName find-kafka-02.cloud.phx3.gdg
+Host kafka05
+  HostName find-kafka-05.cloud.phx3.gdg
 
 Host hmaster2
   HostName P3PLCDSS001.prod.phx3.gdg

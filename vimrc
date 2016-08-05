@@ -1,6 +1,7 @@
 "set cindent
 "set t_Co=256
 "colorscheme torte
+execute pathogen#infect()
 syntax on
 set shiftwidth=2
 set tabstop=2
@@ -28,11 +29,6 @@ autocmd BufWritePre *.tpl :%s/\s\+$//e
 "indent for python
 autocmd Filetype python setlocal ts=4 sts=4 sw=4
 
-"compile coffee script
-autocmd BufWritePost,FileWritePost *.coffee !coffee -c <afile>
-
-"auto indent for py"
-"autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 "highlight tab
 syntax match Tab /\t/
 hi Tab gui=underline guifg=blue ctermbg=blue
@@ -44,6 +40,7 @@ hi Tab gui=underline guifg=blue ctermbg=blue
 filetype plugin indent on
 filetype plugin on
 filetype indent on
+
 
 let mapleader = ","
 "Fast reloading of the .vimrc
