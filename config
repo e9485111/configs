@@ -17,6 +17,11 @@ Host deploy
 Host hmaster
   HostName p3plpashl01.prod.phx3.gdg
 
+Host ha-redis01
+  HostName ha-redis01.cloud.phx3.gdg
+Host ha-redis02
+  HostName ha-redis021.cloud.phx3.gdg
+
 Host kafka01
   HostName find-kafka-01.cloud.phx3.gdg
 Host kafka02
