@@ -7,7 +7,7 @@ Host cwytest3
 Host cwytest4
   Hostname cwytest4.cloud.phx3.gdg
 Host cwy
-  Hostname cwy.cloud.phx3.gdg
+  Hostname 10.22.181.250
 Host my
   Hostname chungwei.cloud.phx3.gdg
 Host ash01
@@ -20,7 +20,7 @@ Host hmaster
 Host ha-redis01
   HostName ha-redis01.cloud.phx3.gdg
 Host ha-redis02
-  HostName ha-redis021.cloud.phx3.gdg
+  HostName ha-redis02.cloud.phx3.gdg
 
 Host kafka01
   HostName find-kafka-01.cloud.phx3.gdg
