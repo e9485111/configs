@@ -1,0 +1,38 @@
+- hosts: run
+  gather_facts: false
+  connection: ssh
+  #sudo: yes
+  vars:
+    username: cyen
+
+  vars_prompt:
+    name: "pw"
+    prompt: "Enter password"
+    private: yes
+
+  tasks:
+    - name: Make ssh dir
+      command: mkdir -p ~{{ username }}/.ssh
+      ignore_errors: no
+    - name: Chmod ssh
+      command: chmod 755 ~{{ username }}/.ssh
+      ignore_errors: no
+    - name: Chmod HOME
+      command: chmod 755 ~{{ username }}
+      ignore_errors: no
+    - name: RM known hosts
+      command: rm -f ~/.ssh/knowh_hosts
+      ignore_errors: no
+    - name: SCP certs 1
+      command: scp -o "StrictHostKeyChecking no" cwy.cloud.phx3.gdg:~/.ssh/* .ssh/
+      ignore_errors: no
+    - name: Download fasd
+      command: chdir=/tmp wget https://github.com/clvv/fasd/tarball/1.0.1
+      ignore_errors: no
+    - name: unzip 
+      command: chdir=/tmp tar zxvf 1.0.1
+      ignore_errors: no
+    - name: install
+      command: chdir=/tmp/clvv-fasd-4822024 make install 
+      become: true
+      ignore_errors: no
