@@ -1,5 +1,6 @@
 [run]
-cwytest.cloud.phx3.gdg
-cwytest2.cloud.phx3.gdg
-cwytest3.cloud.phx3.gdg
-cwytest4.cloud.phx3.gdg
+#ardb-rec-00.cloud.phx3.gdg
+#ardb-rec-01.cloud.phx3.gdg
+#ardb-rec-02.cloud.phx3.gdg
+ardb-rec-03.cloud.iad2.gdg
+ardb-rec-04.cloud.iad2.gdg
