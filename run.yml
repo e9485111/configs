@@ -5,10 +5,10 @@
   vars:
     username: cyen
 
-  vars_prompt:
-    name: "pw"
-    prompt: "Enter password"
-    private: yes
+  #vars_prompt:
+  #  name: "pw"
+  #  prompt: "Enter password"
+  #  private: yes
 
   tasks:
     - name: Make ssh dir
@@ -21,18 +21,50 @@
       command: chmod 755 ~{{ username }}
       ignore_errors: no
     - name: RM known hosts
-      command: rm -f ~/.ssh/knowh_hosts
+      command: echo ""> ~/.ssh/known_hosts
+      ignore_errors: no
+    - name: SCP configs
+      command: scp -r -o "StrictHostKeyChecking no" cwy.cloud.phx3.gdg:~/configs ~/
       ignore_errors: no
     - name: SCP certs 1
       command: scp -o "StrictHostKeyChecking no" cwy.cloud.phx3.gdg:~/.ssh/* .ssh/
       ignore_errors: no
+    - name: RM known hosts
+      command: rm -f ~/.ssh/know_hosts
+      ignore_errors: no
+    - stat: path=/usr/local/bin/fasd
+      register: fasd
     - name: Download fasd
       command: chdir=/tmp wget https://github.com/clvv/fasd/tarball/1.0.1
       ignore_errors: no
+      when: not fasd.stat.exists
     - name: unzip 
       command: chdir=/tmp tar zxvf 1.0.1
       ignore_errors: no
+      when: not fasd.stat.exists
     - name: install
       command: chdir=/tmp/clvv-fasd-4822024 make install 
       become: true
+      ignore_errors: no
+      when: not fasd.stat.exists
+    - name: check rpm1
+      command: rpm -q epel-release
+      register: rpm1
+    - name: install rpm
+      command: rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+      become: true
+      ignore_errors: yes
+      when: rpm1.stdout != "epel-release-6-8.noarch"
+
+    - name: check rpm2
+      command: rpm -q remi-release
+      register: rpm2
+    - name: install rpm 2
+      command: rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+      become: true
+      ignore_errors: yes
+      when: rpm2.stdout != "remi-release-6.8-1.el6.remi.noarch"
+
+    - name: create links
+      command: chdir=~/configs ./create_link.sh
       ignore_errors: no
