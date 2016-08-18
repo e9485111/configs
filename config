@@ -1,9 +1,3 @@
-Host cwytest
-  Hostname cwytest.cloud.phx3.gdg
-Host cwytest2
-  Hostname cwytest2.cloud.phx3.gdg
-Host cwytest3
-  Hostname cwytest3.cloud.phx3.gdg
 Host cwytest4
   Hostname cwytest4.cloud.phx3.gdg
 Host cwy
