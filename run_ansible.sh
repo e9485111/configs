@@ -1,2 +1,2 @@
 #!/bin/bash
-ansible-playbook -i my_hosts run.yml --ask-sudo-pas
+ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook -i hosts run.yml --ask-pass --ask-become-pass

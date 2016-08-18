@@ -4,25 +4,30 @@
   #sudo: yes
   vars:
     username: cyen
-
-  #vars_prompt:
-  #  name: "pw"
-  #  prompt: "Enter password"
-  #  private: yes
+    host: cwy.cloud.phx3.gdg
 
   tasks:
-    - name: Make ssh dir
-      command: mkdir -p ~{{ username }}/.ssh
+    - name: mkdir
+      shell: mkdir -p ~/.ssh
       ignore_errors: no
 
-    - name: create configs dir
-      shell: rm -rf configs; mkdir ~/configs;rm -f ~/.ssh/knowh_hosts
+    - name: create authorized keys
+      shell: echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDrkJyaUYmVQj3s75O6Uo/GZnaroakgZcgR9hjL3uP9cVMENCY1ggagRzIb2ziReK8oSGAukLjOLqU5Wt5GDosU/hSJb0tQN6kiJTq+4Up/UUW4CimZt5JoEpudLZBiZ/vLpAe6So8xXChNlExwS+9WVMsGK6/BZ1wWPekqNsM5C77wk2OZ6NUXyLTEUwpRpBnAmxV5625y5Gmj0P90aC0VeVXlSeRy0dg9ScC6cOFnEPPDoQGnUzcjSCJniBI0UBNrLNz7qNmVw/rXLaQZWaVgTp42bliGEZBIIkeUE88dvMqsQMGM5KaBNrZ/A3R04q8mz6J/PTffh4vtVL95GMTL cyen@LMDV-CHYEN" >> ~/.ssh/authorized_keys; chmod go-w ~/.ssh/authorized_keys
+      ignore_errors: no
+
+    - name: scp certs
+      local_action: shell scp -r -o "StrictHostKeyChecking no" ~/.ssh {{inventory_hostname}}:~/
+      ignore_errors: no
+
+    - name: tar configs
+      command: ssh -o "StrictHostKeyChecking no" {{host}} tar zcvf configs.tar.gz configs
+      run_once: true
       ignore_errors: no
     - name: SCP configs
-      command: scp -r -o "StrictHostKeyChecking no" cwy.cloud.phx3.gdg:~/configs/ ~/
+      command: scp -r -o "StrictHostKeyChecking no" {{host}}:configs.tar.gz ~/
       ignore_errors: no
-    - name: SCP certs
-      command: scp -r -o "StrictHostKeyChecking no" cwy.cloud.phx3.gdg:~/.ssh/authorized_keys cwy.cloud.phx3.gdg:~/.ssh/id_rsa* cwy.cloud.phx3.gdg:~/.ssh/known_hosts  ~/.ssh/
+    - name: untar configs
+      shell: tar zxvf ~/configs.tar.gz;rm configs.tar.gz
       ignore_errors: no
 
     - name: check if fasd is installed
@@ -42,25 +47,25 @@
       ignore_errors: no
       when: not fasd.stat.exists
 
-    - name: check epel rpm
-      shell: rpm -q epel-release
-      register: rpm1
-      ignore_errors: yes
-    - name: install rpm
-      command: rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-      become: true
-      ignore_errors: yes
-      when: rpm1.stdout != "epel-release-6-8.noarch"
-
-    - name: check remi rpm
-      shell: rpm -q remi-release
-      register: rpm2
-      ignore_errors: yes
-    - name: install rpm 2
-      command: rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
-      become: true
-      ignore_errors: yes
-      when: rpm2.stdout != "remi-release-6.8-1.el6.remi.noarch"
+#    - name: check epel rpm
+#      shell: rpm -q epel-release
+#      register: rpm1
+#      ignore_errors: yes
+#    - name: install rpm
+#      command: rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+#      become: true
+#      ignore_errors: yes
+#      when: rpm1.stdout != "epel-release-6-8.noarch"
+#
+#    - name: check remi rpm
+#      shell: rpm -q remi-release
+#      register: rpm2
+#      ignore_errors: yes
+#    - name: install rpm 2
+#      command: rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+#      become: true
+#      ignore_errors: yes
+#      when: rpm2.stdout != "remi-release-6.8-1.el6.remi.noarch"
 
     - name: create links
       command: chdir=~/configs ./create_link.sh

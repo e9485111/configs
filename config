@@ -6,6 +6,16 @@ Host my
   Hostname chungwei.cloud.phx3.gdg
 Host ash01
   HostName a2plfinddev01.prod.iad2.gdg
+Host ash02
+  HostName a2plfinddev02.prod.iad2.gdg
+Host ash03
+  HostName a2plfinddev03.prod.iad2.gdg
+Host ash04
+  HostName a2plfinddev04.prod.iad2.gdg
+Host ash05
+  HostName a2plfinddev05.prod.iad2.gdg
+Host ash06
+  HostName a2plfinddev06.prod.iad2.gdg
 Host deploy
   HostName deploy.cloud.phx3.gdg
 Host hmaster
