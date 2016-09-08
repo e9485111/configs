@@ -1,7 +1,21 @@
-"set cindent
-"set t_Co=256
-"colorscheme torte
-execute pathogen#infect()
+"run git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+"run vim +PluginInstall +qall
+set nocompatible              " be iMproved, required
+filetype off                  " required
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'L9'
+Plugin 'wincent/command-t'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+"execute pathogen#infect()
 syntax on
 set shiftwidth=2
 set tabstop=2
