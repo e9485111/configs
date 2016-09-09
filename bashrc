@@ -30,10 +30,10 @@ export VISUAL=vim
 
 eval "$(fasd --init auto)"
 
-pyenv=`which pyenv`
+export PATH="/home/cyen/.pyenv/bin:$PATH"
+pyenv=`which pyenv 2>/dev/null`
 if [ "$pyenv" ];
 then
-  export PATH="/home/cyen/.pyenv/bin:$PATH"
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi

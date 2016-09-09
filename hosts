@@ -35,7 +35,9 @@ ardb0
 ardb1
 ardb2
 ardb3
-ardb-rec-0
-ardb-rec-1
-ardb-rec-2
-ardb-rec-3
+ardbrec0
+ardbrec1
+ardbrec2
+ardbrec3
+ha-redis01
+ha-redis02
