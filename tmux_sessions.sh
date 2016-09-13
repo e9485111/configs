@@ -19,4 +19,12 @@ tmux new-session -d -s "buck02" "ssh buck02"
 tmux new-window -t "buck02:1" "ssh buck02"
 tmux new-window -t "buck02:2" "ssh buck02"
 
+tmux new-session -d -s "buck04" "ssh buck04"
+tmux new-window -t "buck04:1" "ssh buck04"
+tmux new-window -t "buck04:2" "ssh buck04"
+
+tmux new-session -d -s "mesa02" "ssh mesa02"
+tmux new-window -t "mea02:1" "ssh mesa02"
+tmux new-window -t "mea02:2" "ssh mesa02"
+
 tmux attach-session -t "cwy"
