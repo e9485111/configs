@@ -8,13 +8,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
+Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-"execute pathogen#infect()
+"for airline to display properly in tmux
+set t_Co=256
 syntax on
 set shiftwidth=2
 set tabstop=2
