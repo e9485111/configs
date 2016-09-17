@@ -11,6 +11,7 @@ Plugin 'L9'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'easymotion/vim-easymotion'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -48,18 +49,7 @@ autocmd Filetype python setlocal ts=4 sts=4 sw=4
 syntax match Tab /\t/
 hi Tab gui=underline guifg=blue ctermbg=blue
 
-"highlight > 80
-"autocmd BufRead *.py highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-"autocmd BufRead *.py match OverLength /\%81v.\+/
-
-filetype plugin indent on
-filetype plugin on
-filetype indent on
-
-
 let mapleader = ","
-"Fast reloading of the .vimrc
-map <leader>s :source ~/.vimrc<cr>
 
 "Tab configuration
 map <leader>tn :tabnew<cr>
@@ -71,12 +61,12 @@ map <leader>q :q!<cr>
 map <leader>w :w!<cr>
 map <leader>i [I
 try
-set switchbuf=usetab
-set stal=2
+  set switchbuf=usetab
+  set stal=2
 catch
 endtry
 
-map e :e `pwd`
+map <leader>e :e `pwd`<cr>
 map <leader>n :tabn<cr>
 map <leader>p :tabp<cr>
 map <leader>1 1gt
@@ -88,9 +78,9 @@ map <leader>6 5gt
 map <leader>7 5gt
 map <leader>8 5gt
 map <leader>9 5gt
-map <leader>u :MRU<cr>
-map <leader>? :FufFile<cr>
-map <leader>f :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+"map <leader>u :MRU<cr>
+"map <leader>? :FufFile<cr>
+"map <leader>f :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 map <leader>c :ccl<CR>
 map <leader>t :TlistToggle<cr>
 map <leader>r :call ToggleWrap()<cr>
@@ -182,6 +172,7 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
 function ToggleWrap()
  if (&wrap == 1)
    set nowrap
@@ -189,3 +180,24 @@ function ToggleWrap()
    set wrap
  endif
 endfunction
+
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
+" s{char}{char} to move to {char}{char}
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Move to line
+map <Leader>L <Plug>(easymotion-bd-jk)
+nmap <Leader>L <Plug>(easymotion-overwin-line)
+
+" Gif config
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+
+" These `n` & `N` mappings are options. You do not have to map `n` & `N` to EasyMotion.
+" Without these mappings, `n` & `N` works fine. (These mappings just provide
+" different highlight method and have some other features )
+map  n <Plug>(easymotion-next)
+map  N <Plug>(easymotion-prev)
