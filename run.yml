@@ -47,25 +47,25 @@
       ignore_errors: no
       when: not fasd.stat.exists
 
-#    - name: check epel rpm
-#      shell: rpm -q epel-release
-#      register: rpm1
-#      ignore_errors: yes
-#    - name: install rpm
-#      command: rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
-#      become: true
-#      ignore_errors: yes
-#      when: rpm1.stdout != "epel-release-6-8.noarch"
-#
-#    - name: check remi rpm
-#      shell: rpm -q remi-release
-#      register: rpm2
-#      ignore_errors: yes
-#    - name: install rpm 2
-#      command: rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
-#      become: true
-#      ignore_errors: yes
-#      when: rpm2.stdout != "remi-release-6.8-1.el6.remi.noarch"
+    - name: check epel rpm
+      shell: rpm -q epel-release
+      register: rpm1
+      ignore_errors: yes
+    - name: install rpm
+      command: rpm -Uvh http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
+      become: true
+      ignore_errors: yes
+      when: rpm1.stdout != "epel-release-6-8.noarch"
+
+    - name: check remi rpm
+      shell: rpm -q remi-release
+      register: rpm2
+      ignore_errors: yes
+    - name: install rpm 2
+      command: rpm -Uvh http://rpms.famillecollet.com/enterprise/remi-release-6.rpm
+      become: true
+      ignore_errors: yes
+      when: rpm2.stdout != "remi-release-6.8-1.el6.remi.noarch"
 
     - name: create links
       command: chdir=~/configs ./create_link.sh

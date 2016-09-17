@@ -1,0 +1,22 @@
+- hosts: run
+  gather_facts: false
+  connection: ssh
+  #sudo: yes
+  vars:
+    username: cyen
+    host: cwy.cloud.phx3.gdg
+
+  tasks:
+    - name: tar configs
+      command: ssh -o "StrictHostKeyChecking no" {{host}} tar zcvf configs.tar.gz configs
+      run_once: true
+      ignore_errors: no
+    - name: SCP configs
+      command: scp -r -o "StrictHostKeyChecking no" {{host}}:configs.tar.gz ~/
+      ignore_errors: no
+    - name: untar configs
+      shell: tar zxvf ~/configs.tar.gz;rm configs.tar.gz
+      ignore_errors: no
+    - name: create links
+      command: chdir=~/configs ./create_link.sh
+      ignore_errors: no
