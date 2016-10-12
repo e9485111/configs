@@ -1,5 +1,7 @@
 Host ardbtest
   Hostname ardbtest.cloud.phx3.gdg
+Host ardb-test
+  Hostname ardb-test.cloud.phx3.gdg
 Host cwy
   Hostname 10.22.181.250
 Host my
@@ -20,6 +22,19 @@ Host deploy
   HostName deploy.cloud.phx3.gdg
 Host hmaster
   HostName p3plpashl01.prod.phx3.gdg
+
+Host cassandra1
+  HostName cassandra1.cloud.phx3.gdg
+Host cassandra2
+  HostName cassandra2.cloud.phx3.gdg
+Host cassandra3
+  HostName cassandra3.cloud.phx3.gdg
+Host cassandra4
+  HostName cassandra4.cloud.iad2.gdg
+Host cassandra5
+  HostName cassandra5.cloud.iad2.gdg
+Host cassandra6
+  HostName cassandra6.cloud.iad2.gdg
 
 Host ha-redis01
   HostName ha-redis01.cloud.phx3.gdg

@@ -21,7 +21,7 @@ alias hi='history'
 alias du1='du -h --max-depth=1'
 alias hive='hive --hiveconf hive.cli.print.current.db=true --hiveconf hive.auto.convert.join=true --hiveconf hive.mapjoin.smalltable.filesize=200000000'
 SSH_ENV=$HOME/.ssh/environment
-PATH=/usr/local/bin:$PATH:/data1/home/cyen/git/targeting/app/node_modules/.bin
+PATH=/usr/local/bin:/usr/lib/scala/bin:$PATH
 #. /usr/share/doc/git-1.8.3.1/contrib/completion/git-completion.bash
 
 
@@ -40,3 +40,8 @@ then
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
+
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "

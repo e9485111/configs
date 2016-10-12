@@ -1,6 +1,5 @@
 [run]
 my
-ash01
 deploy
 kafka01
 kafka02
@@ -26,6 +25,11 @@ mesa03
 mesa04
 mesa05
 ash01
+ash02
+ash03
+ash04
+ash05
+ash06
 build
 build2
 staging
