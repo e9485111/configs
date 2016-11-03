@@ -16,30 +16,13 @@ tmux new-window -t "ardbrec:2" -n "ardbrec2" "ssh ardbrec2"
 tmux new-window -t "ardbrec:3" -n "ardbrec3" "ssh ardbrec3"
 tmux new-window -t "ardbrec:4" -n "ardbrec4" "ssh ardbrec4"
 
-tmux new-session -d -s "buck07" "ssh buck07"
-tmux new-window -t "buck07:1" "ssh buck07"
-tmux new-window -t "buck07:2" "ssh buck07"
-tmux new-window -t "buck07:3" "ssh buck07"
-
-tmux new-session -d -s "buck02" "ssh buck02"
-tmux new-window -t "buck02:1" "ssh buck02"
-tmux new-window -t "buck02:2" "ssh buck02"
-
-tmux new-session -d -s "buck04" "ssh buck04"
-tmux new-window -t "buck04:1" "ssh buck04"
-tmux new-window -t "buck04:2" "ssh buck04"
-
-tmux new-session -d -s "buck05" "ssh buck05"
-tmux new-window -t "buck05:1" "ssh buck05"
-tmux new-window -t "buck05:2" "ssh buck05"
-
-tmux new-session -d -s "buck08" "ssh buck08"
-tmux new-window -t "buck08:1" "ssh buck08"
-tmux new-window -t "buck08:2" "ssh buck08"
-
-tmux new-session -d -s "mesa02" "ssh mesa02"
-tmux new-window -t "mea02:1" "ssh mesa02"
-tmux new-window -t "mea02:2" "ssh mesa02"
+for i in buck01 buck02 buck03 buck04 buck05 buck06 buck07 buck08 buck09 buck10 ash01 ash02 ash03 ash04 ash05 ash06 dev03 build unstable
+do
+tmux new-session -d -s "$i" "ssh $i"
+tmux new-window -t "$i:1" "ssh $i"
+tmux new-window -t "$i:2" "ssh $i"
+tmux new-window -t "$i:3" "ssh $i"
+done
 
 tmux new-session -d -s "dev03" "ssh dev03"
 tmux new-window -t "dev03:1" "ssh dev03"
@@ -52,7 +35,4 @@ tmux new-window -t "cassandra:3" -n "cassandra4" "ssh cassandra4"
 tmux new-window -t "cassandra:4" -n "cassandra5" "ssh cassandra5"
 tmux new-window -t "cassandra:5" -n "cassandra6" "ssh cassandra6"
 
-tmux new-session -d -s "ash02" "ssh ash02"
-tmux new-window -t "ash02:1" "ssh ash02"
-tmux new-window -t "ash-2:2" "ssh ash02"
 tmux attach-session -t "cwy"
