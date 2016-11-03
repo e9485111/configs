@@ -34,5 +34,17 @@ tmux new-window -t "cassandra:2" -n "cassandra3" "ssh cassandra3"
 tmux new-window -t "cassandra:3" -n "cassandra4" "ssh cassandra4"
 tmux new-window -t "cassandra:4" -n "cassandra5" "ssh cassandra5"
 tmux new-window -t "cassandra:5" -n "cassandra6" "ssh cassandra6"
+tmux new-window -t "cassandra:8" -n "cassandra8"
+tmux splitw -t "cassandra:8"  -h -p 33
+tmux splitw -t "cassandra:8.0" -h -p 50
+tmux splitw -t "cassandra:8.0" -v -p 50
+tmux splitw -t "cassandra:8.2" -v -p 50
+tmux splitw -t "cassandra:8.4" -v -p 50
+tmux send-key -t "cassandra:8.0" "ssh cassandra1" ENTER
+tmux send-key -t "cassandra:8.1" "ssh cassandra4" ENTER
+tmux send-key -t "cassandra:8.2" "ssh cassandra2" ENTER
+tmux send-key -t "cassandra:8.3" "ssh cassandra5" ENTER
+tmux send-key -t "cassandra:8.4" "ssh cassandra3" ENTER
+tmux send-key -t "cassandra:8.5" "ssh cassandra6" ENTER
 
 tmux attach-session -t "cwy"
