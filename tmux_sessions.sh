@@ -4,19 +4,7 @@ tmux new-session -d -s "cwy"
 tmux new-session -d -s "ha-redis" -n "ha-redis01" "ssh ha-redis01"
 tmux new-window -t "ha-redis:1" -n "ha-redis02"  "ssh ha-redis02"
 
-tmux new-session -d -s "ardb" -n "ardb0" "ssh ardb0"
-tmux new-window -t "ardb:1" -n "ardb1" "ssh ardb1"
-
-
-tmux new-session -d -s "ardb-test" -n "ardb-test0" "ssh ardb-test"
-
-tmux new-session -d -s "ardbrec" -n "ardbrec0" "ssh ardbrec0"
-tmux new-window -t "ardbrec:1" -n "ardbrec1" "ssh ardbrec1"
-tmux new-window -t "ardbrec:2" -n "ardbrec2" "ssh ardbrec2"
-tmux new-window -t "ardbrec:3" -n "ardbrec3" "ssh ardbrec3"
-tmux new-window -t "ardbrec:4" -n "ardbrec4" "ssh ardbrec4"
-
-for i in buck01 buck02 buck03 buck04 buck05 buck06 buck07 buck08 buck09 buck10 ash01 ash02 ash03 ash04 ash05 ash06 dev03 mesa01 build unstable
+for i in cwy-dev buck01 buck02 buck03 buck04 buck05 buck06 buck07 buck08 buck09 buck10 ash01 ash02 ash03 ash04 ash05 ash06 dev03 mesa01 build unstable dashboard find-zone find-graphite
 do
 tmux new-session -d -s "$i" "ssh $i"
 tmux new-window -t "$i:1" "ssh $i"
@@ -50,4 +38,28 @@ then
   tmux send-key -t "cassandra:8.4" "ssh cassandra3" ENTER
   tmux send-key -t "cassandra:8.5" "ssh cassandra6" ENTER
   fi
+
+tmux new-session -d -s "cassandra2" -n "cassandra7" "ssh cassandra7"
+tmux new-window -t "cassandra2:1" -n "cassandra8" "ssh cassandra8"
+tmux new-window -t "cassandra2:2" -n "cassandra9" "ssh cassandra9"
+tmux new-window -t "cassandra2:3" -n "cassandra10" "ssh cassandra10"
+tmux new-window -t "cassandra2:4" -n "cassandra11" "ssh cassandra11"
+tmux new-window -t "cassandra2:5" -n "cassandra12" "ssh cassandra12"
+exists=`tmux list-windows -t cassandra2|grep 8:\ all`
+if [[ -z "$exists" ]];
+then
+  tmux new-window -t "cassandra2:8" -n "all"
+  tmux splitw -t "cassandra2:8"  -h -p 33
+  tmux splitw -t "cassandra2:8.0" -h -p 50
+  tmux splitw -t "cassandra2:8.0" -v -p 50
+  tmux splitw -t "cassandra2:8.2" -v -p 50
+  tmux splitw -t "cassandra2:8.4" -v -p 50
+  tmux send-key -t "cassandra2:8.0" "ssh cassandra7" ENTER
+  tmux send-key -t "cassandra2:8.1" "ssh cassandra10" ENTER
+  tmux send-key -t "cassandra2:8.2" "ssh cassandra8" ENTER
+  tmux send-key -t "cassandra2:8.3" "ssh cassandra11" ENTER
+  tmux send-key -t "cassandra2:8.4" "ssh cassandra9" ENTER
+  tmux send-key -t "cassandra2:8.5" "ssh cassandra12" ENTER
+  fi
+
 tmux attach-session -t "cwy"

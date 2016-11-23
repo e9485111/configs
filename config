@@ -1,11 +1,13 @@
-Host ardbtest
-  Hostname ardbtest.cloud.phx3.gdg
-Host ardb-test
-  Hostname ardb-test.cloud.phx3.gdg
+Host find-graphite
+  Hostname find-graphite.cloud.phx3.gdg
 Host cwy
   Hostname 10.22.181.250
+Host cwy-dev
+  Hostname cwy-dev.cloud.phx3.gdg
 Host my
   Hostname chungwei.cloud.phx3.gdg
+Host find-zone
+  Hostname find-zone.cloud.phx3.gdg
 Host ash01
   HostName a2plfinddev01.prod.iad2.gdg
 Host ash02
@@ -35,6 +37,18 @@ Host cassandra5
   HostName cassandra5.cloud.iad2.gdg
 Host cassandra6
   HostName cassandra6.cloud.iad2.gdg
+Host cassandra7
+  HostName cassandra7.cloud.phx3.gdg
+Host cassandra8
+  HostName cassandra8.cloud.phx3.gdg
+Host cassandra9
+  HostName cassandra9.cloud.phx3.gdg
+Host cassandra10
+  HostName cassandra10.cloud.iad2.gdg
+Host cassandra11
+  HostName cassandra11.cloud.iad2.gdg
+Host cassandra12
+  HostName cassandra12.cloud.iad2.gdg
 
 Host ha-redis01
   HostName ha-redis01.cloud.phx3.gdg
@@ -280,16 +294,6 @@ Host ardb3
   HostName ardb-03.cloud.iad2.gdg
 Host ardb4
   HostName ardb-04.cloud.iad2.gdg
-Host ardbrec0
-  HostName ardb-rec-00.cloud.phx3.gdg
-Host ardbrec1
-  HostName ardb-rec-01.cloud.phx3.gdg
-Host ardbrec2
-  HostName ardb-rec-02.cloud.phx3.gdg
-Host ardbrec3
-  HostName ardb-rec-03.cloud.iad2.gdg
-Host ardbrec4
-  HostName ardb-rec-04.cloud.iad2.gdg
 Host deploy
   HostName deploy.cloud.phx3.gdg
 

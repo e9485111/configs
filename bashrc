@@ -49,3 +49,5 @@ export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/cyen/.sdkman"
 [[ -s "/home/cyen/.sdkman/bin/sdkman-init.sh" ]] && source "/home/cyen/.sdkman/bin/sdkman-init.sh"
+
+export JAVA_HOME=/opt/jdk1.8.0_101
