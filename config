@@ -6,6 +6,20 @@ Host cwy-dev
   Hostname cwy-dev.cloud.phx3.gdg
 Host my
   Hostname chungwei.cloud.phx3.gdg
+Host cdb1
+  Hostname cockroachdb1.cloud.phx3.gdg
+Host cdb2
+  Hostname cockroachdb2.cloud.phx3.gdg
+Host cdb3
+  Hostname cockroachdb3.cloud.phx3.gdg
+
+Host crdb1
+  Hostname crdb1.cloud.phx3.gdg
+Host crdb2
+  Hostname crdb2.cloud.phx3.gdg
+Host crdb3
+  Hostname crdb3.cloud.phx3.gdg
+
 Host find-zone
   Hostname find-zone.cloud.phx3.gdg
 Host ash01

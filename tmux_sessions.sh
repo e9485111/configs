@@ -45,6 +45,7 @@ tmux new-window -t "cassandra2:2" -n "cassandra9" "ssh cassandra9"
 tmux new-window -t "cassandra2:3" -n "cassandra10" "ssh cassandra10"
 tmux new-window -t "cassandra2:4" -n "cassandra11" "ssh cassandra11"
 tmux new-window -t "cassandra2:5" -n "cassandra12" "ssh cassandra12"
+
 exists=`tmux list-windows -t cassandra2|grep 8:\ all`
 if [[ -z "$exists" ]];
 then
@@ -61,5 +62,20 @@ then
   tmux send-key -t "cassandra2:8.4" "ssh cassandra9" ENTER
   tmux send-key -t "cassandra2:8.5" "ssh cassandra12" ENTER
   fi
+
+tmux new-session -d -s "crdb" -n "crdb1" "ssh crdb1"
+tmux new-window -t "crdb:1" -n "crdb2" "ssh crdb2"
+tmux new-window -t "crdb:2" -n "crdb3" "ssh crdb3"
+
+exists=`tmux list-windows -t crdb|grep 8:\ all`
+if [[ -z "$exists" ]];
+then
+  tmux new-window -t "crdb:8" -n "all"
+  tmux splitw -t "crdb"  -v -p 50
+  tmux splitw -t "crdb:8.1"  -h -p 50
+  tmux send-key -t "crdb:8.0" "ssh crdb1" ENTER
+  tmux send-key -t "crdb:8.1" "ssh crdb2" ENTER
+  tmux send-key -t "crdb:8.2" "ssh crdb3" ENTER
+fi
 
 tmux attach-session -t "cwy"

@@ -35,14 +35,6 @@ build2
 staging
 unstable
 stable
-ardb0
-ardb1
-ardb2
-ardb3
-ardbrec0
-ardbrec1
-ardbrec2
-ardbrec3
 ha-redis01
 ha-redis02
 cassandra1
@@ -57,3 +49,7 @@ cassandra9
 cassandra10
 cassandra11
 cassandra12
+crdb1
+crdb2
+crdb3
+cwy-dev
