@@ -20,6 +20,20 @@ Host crdb2
 Host crdb3
   Hostname crdb3.cloud.phx3.gdg
 
+Host g1
+  Hostname g1dlfinddev01.dev.glbt1.gdg
+Host g2
+  Hostname g1dlfinddev02.dev.glbt1.gdg
+Host g4
+  Hostname g1dlfinddev04.dev.glbt1.gdg
+
+Host find-dashboard1
+  Hostname find-dashboard1.cloud.phx3.gdg
+Host find-dashboard2
+  Hostname find-dashboard2.cloud.phx3.gdg
+Host find-dashboard3
+  Hostname find-dashboard3.cloud.phx3.gdg
+
 Host find-zone
   Hostname find-zone.cloud.phx3.gdg
 Host ash01

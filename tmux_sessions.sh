@@ -4,7 +4,7 @@ tmux new-session -d -s "cwy"
 tmux new-session -d -s "ha-redis" -n "ha-redis01" "ssh ha-redis01"
 tmux new-window -t "ha-redis:1" -n "ha-redis02"  "ssh ha-redis02"
 
-for i in cwy-dev buck01 buck02 buck03 buck04 buck05 buck06 buck07 buck08 buck09 buck10 ash01 ash02 ash03 ash04 ash05 ash06 dev03 mesa01 build unstable dashboard find-zone find-graphite
+for i in cwy-dev buck01 buck02 buck03 buck04 buck05 buck06 buck07 buck08 buck09 buck10 ash01 ash02 ash03 ash04 ash05 ash06 dev03 mesa01 build unstable dashboard find-zone find-graphite find-dashboard1 dev03
 do
 tmux new-session -d -s "$i" "ssh $i"
 tmux new-window -t "$i:1" "ssh $i"
@@ -12,16 +12,31 @@ tmux new-window -t "$i:2" "ssh $i"
 tmux new-window -t "$i:3" "ssh $i"
 done
 
-tmux new-session -d -s "dev03" "ssh dev03"
-tmux new-window -t "dev03:1" "ssh dev03"
-tmux new-window -t "dev03:2" "ssh dev03"
+tmux new-session -d -s "gilbert" -n "g1" "ssh g1"
+tmux new-window -t "gilbert:1" -n "g2" "ssh g2"
+tmux new-window -t "gilbert:2" -n "g4" "ssh g4"
 
+for i in 3 4
+do
+  exists=`tmux list-windows -t gilbert|grep $i:\ all`
+  if [[ -z "$exists" ]];
+  then
+    tmux new-window -t "gilbert:$i" -n "all"
+    tmux splitw -t "gilbert:$i"  -v -p 50
+    tmux splitw -t "gilbert:$i.1"  -h -p 50
+    tmux send-key -t "gilbert:$i.0" "ssh g1" ENTER
+    tmux send-key -t "gilbert:$i.1" "ssh g2" ENTER
+    tmux send-key -t "gilbert:$i.2" "ssh g4" ENTER
+
+  fi
+done
 tmux new-session -d -s "cassandra" -n "cassandra1" "ssh cassandra1"
 tmux new-window -t "cassandra:1" -n "cassandra2" "ssh cassandra2"
 tmux new-window -t "cassandra:2" -n "cassandra3" "ssh cassandra3"
 tmux new-window -t "cassandra:3" -n "cassandra4" "ssh cassandra4"
 tmux new-window -t "cassandra:4" -n "cassandra5" "ssh cassandra5"
 tmux new-window -t "cassandra:5" -n "cassandra6" "ssh cassandra6"
+
 exists=`tmux list-windows -t cassandra|grep 8:\ all`
 if [[ -z "$exists" ]];
 then
