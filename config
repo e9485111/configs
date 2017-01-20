@@ -20,6 +20,13 @@ Host crdb2
 Host crdb3
   Hostname crdb3.cloud.phx3.gdg
 
+Host spam1
+  Hostname find-spam-01.cloud.phx3.gdg
+Host spam2
+  Hostname find-spam-02.cloud.phx3.gdg
+Host spam4
+  Hostname find-spam-04.cloud.phx3.gdg
+
 Host g1
   Hostname g1dlfinddev01.dev.glbt1.gdg
 Host g2
