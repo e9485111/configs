@@ -20,10 +20,11 @@ alias vi='vim'
 alias hi='history'
 alias du1='du -h --max-depth=1'
 alias hive='hive --hiveconf hive.cli.print.current.db=true --hiveconf hive.auto.convert.join=true --hiveconf hive.mapjoin.smalltable.filesize=200000000'
+
+tg() { tail -f $1|grep -P "$2"; }
+
 SSH_ENV=$HOME/.ssh/environment
 PATH=/usr/local/bin:/usr/lib/scala/bin:$PATH
-#. /usr/share/doc/git-1.8.3.1/contrib/completion/git-completion.bash
-
 
 alias gst='git st'
 alias gdf='git diff'
