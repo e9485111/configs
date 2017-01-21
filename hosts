@@ -1,4 +1,7 @@
 [run]
+spam1
+spam2
+spam4
 my
 deploy
 kafka01
@@ -19,11 +22,6 @@ buck07
 buck08
 buck09
 buck10
-mesa01
-mesa02
-mesa03
-mesa04
-mesa05
 ash01
 ash02
 ash03
@@ -53,3 +51,14 @@ crdb1
 crdb2
 crdb3
 cwy-dev
+find-dashboard1
+find-dashboard2
+find-dashboard3
+find-graphite
+g1
+g2
+g4
+g5
+spam1
+spam2
+spam4

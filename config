@@ -33,6 +33,8 @@ Host g2
   Hostname g1dlfinddev02.dev.glbt1.gdg
 Host g4
   Hostname g1dlfinddev04.dev.glbt1.gdg
+Host g5
+  Hostname g1dlfinddev05.dev.glbt1.gdg
 
 Host find-dashboard1
   Hostname find-dashboard1.cloud.phx3.gdg
