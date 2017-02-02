@@ -6,12 +6,6 @@ Host cwy-dev
   Hostname cwy-dev.cloud.phx3.gdg
 Host my
   Hostname chungwei.cloud.phx3.gdg
-Host cdb1
-  Hostname cockroachdb1.cloud.phx3.gdg
-Host cdb2
-  Hostname cockroachdb2.cloud.phx3.gdg
-Host cdb3
-  Hostname cockroachdb3.cloud.phx3.gdg
 
 Host crdb1
   Hostname crdb1.cloud.phx3.gdg
@@ -19,6 +13,21 @@ Host crdb2
   Hostname crdb2.cloud.phx3.gdg
 Host crdb3
   Hostname crdb3.cloud.phx3.gdg
+Host crdb1-a2
+  Hostname crdb1-a2.cloud.iad2.gdg
+Host crdb2-a2
+  Hostname crdb2-a2.cloud.iad2.gdg
+Host crdb3-a2
+  Hostname crdb3-a2.cloud.iad2.gdg
+Host crdb4
+  Hostname crdb4.cloud.phx3.gdg
+Host crdb5
+  Hostname crdb5.cloud.phx3.gdg
+Host crdb6
+  Hostname crdb6.cloud.phx3.gdg
+
+Host pixel
+  Hostname pixel.cloud.phx3.gdg
 
 Host spam1
   Hostname find-spam-01.cloud.phx3.gdg
@@ -42,6 +51,16 @@ Host find-dashboard2
   Hostname find-dashboard2.cloud.phx3.gdg
 Host find-dashboard3
   Hostname find-dashboard3.cloud.phx3.gdg
+Host find-dashboard4
+  Hostname find-dashboard4.cloud.phx3.gdg
+Host find-dashboard5
+  Hostname find-dashboard5.cloud.phx3.gdg
+Host find-dashboard6
+  Hostname find-dashboard6.cloud.phx3.gdg
+Host find-dashboard7
+  Hostname find-dashboard7.cloud.phx3.gdg
+Host find-dashboard8
+  Hostname find-dashboard8.cloud.phx3.gdg
 
 Host find-zone
   Hostname find-zone.cloud.phx3.gdg
