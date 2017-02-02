@@ -13,4 +13,6 @@ rm ~/.ssh/config
 ln -s ~/configs/config ~/.ssh/config
 rm ~/.slate
 ln -s ~/configs/slate ~/.slate
+rm ~/split.sh
+ln -s ~/configs/split.sh ~/split.sh
 chmod go-w ~/.ssh/config

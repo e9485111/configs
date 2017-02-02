@@ -10,6 +10,8 @@ alias grep='grep --color'
 alias less='less -MSr'
 alias lh='ls -lh'
 alias lg='ll|grep'
+alias la='ll -a'
+alias lah='ll -ah'
 alias cl='clear'
 alias ka='killall'
 alias j='z'
@@ -20,7 +22,6 @@ alias hg='hi|grep'
 alias vi='vim'
 alias hi='history'
 alias du1='du -h --max-depth=1'
-alias hive='hive --hiveconf hive.cli.print.current.db=true --hiveconf hive.auto.convert.join=true --hiveconf hive.mapjoin.smalltable.filesize=200000000'
 
 tg() { tail -f $1|grep -P "$2"; }
 
@@ -29,7 +30,6 @@ PATH=/usr/local/bin:/usr/lib/scala/bin:$PATH
 
 alias gst='git st'
 alias gdf='git diff'
-alias gda='git diff'
 
 export VISUAL=vim
 
