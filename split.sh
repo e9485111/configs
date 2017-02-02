@@ -50,7 +50,7 @@ then
   tmux send-key -t "$next.2" "ssh $1$4" ENTER
   tmux send-key -t "$next.3" "ssh $1$5" ENTER
   tmux send-key -t "$next.4" "ssh $1$6" ENTER
-  tmux send-key -t "$next.4" "ssh $1$7" ENTER
+  tmux send-key -t "$next.5" "ssh $1$7" ENTER
 fi
 if [ $total_pane -eq 7 ];
 then
