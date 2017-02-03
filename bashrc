@@ -47,9 +47,49 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/cyen/.sdkman"
-[[ -s "/home/cyen/.sdkman/bin/sdkman-init.sh" ]] && source "/home/cyen/.sdkman/bin/sdkman-init.sh"
-
 export JAVA_HOME=/opt/jdk1.8.0_101
+
+jstart() {
+   for i in $@; do
+       echo "start jetty "$i
+       sudo service jetty$i start
+       echo
+   done
+}
+
+jout() {
+   for i in $@; do
+       echo "take out "$i
+       curl localhost:$1/v3/takeoutofrotation
+       echo
+   done
+}
+
+jstop() {
+   for i in $@; do
+       echo "stop jetty "$i
+       sudo service jetty$i stop
+       echo
+   done
+}
+
+jstart() {
+   for i in $@; do
+       echo "start jetty "$i
+       sudo service jetty$i start
+       echo
+   done
+}
+
+enterfolder() {
+   cd /var/jetty$1/DomainIQ/logs
+   pwd
+}
+
+jin() {
+   for i in $@; do
+       echo "put in "$i
+       curl localhost:$i/v3/putbackintorotation
+       echo
+   done
+}
