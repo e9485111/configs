@@ -49,6 +49,9 @@ parse_git_branch() {
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 export JAVA_HOME=/opt/jdk1.8.0_101
 
+jport() {
+  pg jetty|grep -oP "jetty\d\d\d\d"|sort|uniq
+}
 jstart() {
    for i in $@; do
        echo "start jetty "$i
