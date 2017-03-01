@@ -15,7 +15,7 @@ done
 tmux new-session -d -s "gilbert" -n "g1" "ssh g1"
 tmux new-window -t "gilbert:1" -n "g2" "ssh g2"
 tmux new-window -t "gilbert:2" -n "g4" "ssh g4"
-tmux new-window -t "gilbert:3" -n "g5" "ssh g4"
+tmux new-window -t "gilbert:3" -n "g5" "ssh g5"
 
 for i in 4 5
 do

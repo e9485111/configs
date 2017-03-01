@@ -15,4 +15,6 @@ rm ~/.slate
 ln -s ~/configs/slate ~/.slate
 rm ~/split.sh
 ln -s ~/configs/split.sh ~/split.sh
+rm ~/percentile.sh
+ln -s ~/configs/percentile.sh ~/percentile.sh
 chmod go-w ~/.ssh/config
