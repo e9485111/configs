@@ -7,6 +7,13 @@ Host cwy-dev
 Host my
   Hostname chungwei.cloud.phx3.gdg
 
+Host find-kube01
+  Hostname find-kube01.cloud.phx3.gdg
+Host find-kube02
+  Hostname find-kube02.cloud.phx3.gdg
+Host find-kube03
+  Hostname find-kube03.cloud.phx3.gdg
+
 Host crdb1
   Hostname crdb1.cloud.phx3.gdg
 Host crdb2

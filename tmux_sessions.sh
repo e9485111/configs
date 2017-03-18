@@ -12,6 +12,13 @@ tmux new-window -t "$i:2" "ssh $i"
 tmux new-window -t "$i:3" "ssh $i"
 done
 
+
+tmux new-session -d -s "kube" -n "kube1" "ssh find-kube01"
+tmux new-window -t "kube:1" -n "kube2" "ssh find-kube02"
+tmux new-window -t "kube:2" -n "kube3" "ssh find-kube03"
+tmux new-window -t "kube:3" -n "all" "ssh cwy"
+#tmux send-key -t "kube:3"  "~/split.sh find-kube0 1 2 3" ENTER
+
 tmux new-session -d -s "gilbert" -n "g1" "ssh g1"
 tmux new-window -t "gilbert:1" -n "g2" "ssh g2"
 tmux new-window -t "gilbert:2" -n "g4" "ssh g4"
