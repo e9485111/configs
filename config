@@ -5,6 +5,10 @@ Host cwy
 Host cwy-dev
   Hostname cwy-dev.cloud.phx3.gdg
 
+Host find-vpn
+  Hostname 35.185.215.54
+Host find-vpn-1
+  Hostname 35.185.195.56
 
 Host gc-kube1
   Hostname 104.199.119.36
