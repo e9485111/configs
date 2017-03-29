@@ -1,0 +1,52 @@
+- hosts: run
+  gather_facts: false
+  connection: ssh
+  #sudo: yes
+  vars:
+    username: cyen
+    host: 35.185.236.160
+
+  tasks:
+    - name: mkdir
+      shell: mkdir -p ~/.ssh
+      ignore_errors: no
+
+    - name: create authorized keys
+      shell: echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDrkJyaUYmVQj3s75O6Uo/GZnaroakgZcgR9hjL3uP9cVMENCY1ggagRzIb2ziReK8oSGAukLjOLqU5Wt5GDosU/hSJb0tQN6kiJTq+4Up/UUW4CimZt5JoEpudLZBiZ/vLpAe6So8xXChNlExwS+9WVMsGK6/BZ1wWPekqNsM5C77wk2OZ6NUXyLTEUwpRpBnAmxV5625y5Gmj0P90aC0VeVXlSeRy0dg9ScC6cOFnEPPDoQGnUzcjSCJniBI0UBNrLNz7qNmVw/rXLaQZWaVgTp42bliGEZBIIkeUE88dvMqsQMGM5KaBNrZ/A3R04q8mz6J/PTffh4vtVL95GMTL cyen@LMDV-CHYEN" >> ~/.ssh/authorized_keys; chmod go-w ~/.ssh/authorized_keys
+      ignore_errors: no
+    - name: ctags
+      action: yum name=ctags
+      become: true
+    - name: wget
+      action: yum name=wget
+      become: true
+    - name: tar configs
+      command: ssh -o "StrictHostKeyChecking no" {{host}} tar zcvf configs.tar.gz configs
+      run_once: true
+      ignore_errors: no
+    - name: SCP configs
+      command: scp -r -o "StrictHostKeyChecking no" {{host}}:configs.tar.gz ~/
+      ignore_errors: no
+    - name: untar configs
+      shell: tar zxvf ~/configs.tar.gz;rm configs.tar.gz
+      ignore_errors: no
+
+    - name: check if fasd is installed
+      stat: path=/usr/local/bin/fasd
+      register: fasd
+    - name: Download fasd
+      command: chdir=/tmp wget https://github.com/clvv/fasd/tarball/1.0.1
+      ignore_errors: no
+      when: not fasd.stat.exists
+    - name: unzip 
+      command: chdir=/tmp tar zxvf 1.0.1
+      ignore_errors: no
+      when: not fasd.stat.exists
+    - name: install
+      command: chdir=/tmp/clvv-fasd-4822024 make install 
+      become: true
+      ignore_errors: no
+      when: not fasd.stat.exists
+    - name: create links
+      command: chdir=~/configs ./create_link.sh
+      ignore_errors: no
