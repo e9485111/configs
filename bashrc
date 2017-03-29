@@ -15,6 +15,7 @@ alias lah='ll -ah'
 alias cl='clear'
 alias ka='killall'
 alias j='z'
+alias k='kubectl'
 alias jj='zz'
 alias se='sf -e vim'
 alias pg='ps aux |grep'
@@ -44,7 +45,7 @@ then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-parse_git_branch() {
+function parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
