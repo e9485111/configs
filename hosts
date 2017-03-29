@@ -1,4 +1,5 @@
 [run]
+find-log
 find-kube01
 find-kube02
 find-kube03

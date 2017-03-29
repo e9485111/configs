@@ -4,8 +4,17 @@ Host cwy
   Hostname 10.22.181.250
 Host cwy-dev
   Hostname cwy-dev.cloud.phx3.gdg
-Host my
-  Hostname chungwei.cloud.phx3.gdg
+
+
+Host gc-kube1
+  Hostname 104.199.119.36
+Host gc-kube2
+  Hostname 104.199.125.222 
+
+Host find-log
+  Hostname find-log.cloud.phx3.gdg
+Host find-registry
+  Hostname find-registry.cloud.phx3.gdg
 
 Host find-kube01
   Hostname find-kube01.cloud.phx3.gdg
@@ -13,6 +22,11 @@ Host find-kube02
   Hostname find-kube02.cloud.phx3.gdg
 Host find-kube03
   Hostname find-kube03.cloud.phx3.gdg
+
+Host aws-kube
+  User centos
+  IdentityFile ~/.ssh/findoregon.pem
+  Hostname 35.166.172.250
 
 Host crdb1
   Hostname crdb1.cloud.phx3.gdg
