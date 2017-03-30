@@ -17,6 +17,15 @@ Host gc-kube1
 Host gc-kube2
   Hostname 104.199.125.222 
 
+Host vpn-client-01
+  Hostname vpn-client-01.cloud.phx3.gdg
+Host vpn-client-02
+  Hostname vpn-client-02.cloud.phx3.gdg
+Host vpn-client-03
+  Hostname vpn-client-03.cloud.phx3.gdg
+Host vpn-client-04
+  Hostname 10.32.11.188
+
 Host find-log
   Hostname find-log.cloud.phx3.gdg
 Host find-registry
