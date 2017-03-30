@@ -15,7 +15,7 @@ Host find-kube-master
 Host gc-kube1
   Hostname 104.199.119.36
 Host gc-kube2
-  Hostname 104.199.125.222 
+  Hostname 35.185.236.160 
 
 Host vpn-client-01
   Hostname vpn-client-01.cloud.phx3.gdg
