@@ -24,6 +24,8 @@ alias tf='tail -f'
 alias vi='vim'
 alias hi='history'
 alias du1='du -h --max-depth=1'
+alias k='kubectl'
+alias d='docker'
 
 tg() { tail -f $1|grep -P "$2"; }
 

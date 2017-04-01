@@ -4,7 +4,7 @@
   #sudo: yes
   vars:
     username: cyen
-    host: cwy.cloud.phx3.gdg
+    host: 10.22.181.250
 
   tasks:
     - name: mkdir
@@ -19,6 +19,12 @@
       local_action: shell scp -r -o "StrictHostKeyChecking no" ~/.ssh {{inventory_hostname}}:~/
       ignore_errors: no
 
+    - name: ctags
+      action: yum name=ctags
+      become: true
+    - name: wget
+      action: yum name=wget
+      become: true
     - name: tar configs
       command: ssh -o "StrictHostKeyChecking no" {{host}} tar zcvf configs.tar.gz configs
       run_once: true
@@ -46,9 +52,6 @@
       become: true
       ignore_errors: no
       when: not fasd.stat.exists
-    - name: ctags
-      action: yum name=ctags
-      become: true
     - name: create links
       command: chdir=~/configs ./create_link.sh
       ignore_errors: no
