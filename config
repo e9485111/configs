@@ -1,3 +1,6 @@
+Host *
+    StrictHostKeyChecking no
+
 Host find-graphite
   Hostname find-graphite.cloud.phx3.gdg
 Host cwy
@@ -6,10 +9,12 @@ Host cwy-dev
   Hostname cwy-dev.cloud.phx3.gdg
 
 Host find-vpn
-  Hostname 35.185.215.54
+  Hostname 35.185.226.206
 Host find-vpn-1
-  Hostname 35.185.195.56
+  Hostname 35.185.215.54
 
+Host vpn-server
+  Hostname 35.185.241.207
 Host find-kube-master
   Hostname 104.196.245.185 
 Host gc-kube1
