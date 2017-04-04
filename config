@@ -2,7 +2,7 @@ Host *
     StrictHostKeyChecking no
 
 Host gcwy
-  Hostname 35.185.202.141 
+  Hostname 35.185.202.141
 Host find-graphite
   Hostname find-graphite.cloud.phx3.gdg
 Host cwy
