@@ -6,7 +6,8 @@ tmux new-window -t "ha-redis:1" -n "ha-redis02"  "ssh ha-redis02"
 
 for i in cwy-dev buck01 buck02 buck03 buck04 buck05 buck06 buck07 buck08 \
   buck09 buck10 ash01 ash02 ash03 ash04 ash05 ash06 dev03 mesa01 build \
-unstable dashboard find-zone find-graphite find-dashboard1 find-log
+unstable dashboard find-zone find-graphite find-dashboard1 find-log \
+deploy
 do
 tmux new-session -d -s "$i" "ssh $i"
 tmux new-window -t "$i:1" "ssh $i"

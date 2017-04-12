@@ -1,6 +1,12 @@
 Host *
     StrictHostKeyChecking no
 
+Host jenkins
+  Hostname 10.138.254.19
+Host logging
+  Hostname 10.138.254.16
+Host gcwy
+  Hostname 35.185.202.141 
 Host find-graphite
   Hostname find-graphite.cloud.phx3.gdg
 Host cwy
@@ -8,13 +14,20 @@ Host cwy
 Host cwy-dev
   Hostname cwy-dev.cloud.phx3.gdg
 
-Host find-vpn
-  Hostname 35.185.226.206
-Host find-vpn-1
-  Hostname 35.185.215.54
+Host consul1
+  Hostname 10.138.254.6
+Host consul2
+  Hostname 10.138.254.7
+Host consul3
+  Hostname 10.138.254.8
+Host consul4
+  Hostname 10.138.254.9
 
 Host vpn-server
   Hostname 35.185.241.207
+
+##################
+
 Host find-kube-master
   Hostname 104.196.245.185 
 Host gc-kube1
