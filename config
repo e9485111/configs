@@ -1,6 +1,7 @@
 Host *
     StrictHostKeyChecking no
 
+
 ##google below
 Host jenkins
   Hostname 10.138.254.19
