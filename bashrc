@@ -24,9 +24,15 @@ alias tf='tail -f'
 alias vi='vim'
 alias hi='history'
 alias du1='du -h --max-depth=1'
-alias k='kubectl'
 alias d='docker'
-
+alias k="kubectl"
+alias kd="kubectl describe"
+alias kg="kubectl get"
+alias kc="kubectl create"
+alias kdel="kubectl delete"
+alias ke="kubectl exec -it"
+alias kdes="kubectl describe"
+alias kl="kubectl logs"
 tg() { tail -f $1|grep -P "$2"; }
 
 SSH_ENV=$HOME/.ssh/environment

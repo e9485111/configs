@@ -24,6 +24,10 @@ Host gc-kube1
 Host gc-kube2
   Hostname 35.185.236.160 
 
+Host aws-kube
+  Hostname 13.112.5.239
+  User ec2-user
+  IdentityFile /home/cyen/.ssh/findtokyo.pem
 
 Host vpn-client-01
   Hostname vpn-client-01.cloud.phx3.gdg
@@ -84,6 +88,8 @@ Host g1
   Hostname g1dlfinddev01.dev.glbt1.gdg
 Host g2
   Hostname g1dlfinddev02.dev.glbt1.gdg
+Host g3
+  Hostname g1dlfinddev03.dev.glbt1.gdg
 Host g4
   Hostname g1dlfinddev04.dev.glbt1.gdg
 Host g5
@@ -328,6 +334,14 @@ Host keynode02
   HostName key-node-02.cloud.dev.phx3.gdg
 Host keynode03
   HostName key-node-03.cloud.dev.phx3.gdg
+Host key-single-01
+  HostName key-single-01.cloud.dev.phx3.gdg
+Host key-single-02
+  HostName key-single-02.cloud.dev.phx3.gdg
+Host key-single-03
+  HostName key-single-03.cloud.dev.phx3.gdg
+Host key-single-04
+  HostName key-single-04.cloud.dev.phx3.gdg
 Host whois
   HostName whois.cloud.dev.phx3.gdg
 Host whois01
