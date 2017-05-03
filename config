@@ -63,10 +63,10 @@ Host aws-vpn
   IdentityFile ~/.ssh/findtokyo.pem
   Hostname 54.65.8.185
 
-Host aws-kube3
+Host aws-kube2
   User centos
   IdentityFile ~/.ssh/findtokyo.pem
-  Hostname 13.112.5.239
+  Hostname 52.197.176.93
 
 Host aws-kube
   User centos
