@@ -58,10 +58,20 @@ Host find-kube02
 Host find-kube03
   Hostname find-kube03.cloud.phx3.gdg
 
+Host aws-kube-server
+  User centos
+  IdentityFile ~/.ssh/findtokyo.pem
+  Hostname 52.199.72.234
+
 Host aws-vpn
   User centos
   IdentityFile ~/.ssh/findtokyo.pem
   Hostname 54.65.8.185
+
+Host aws-kube3
+  User centos
+  IdentityFile ~/.ssh/findtokyo.pem
+  Hostname 52.192.156.68
 
 Host aws-kube2
   User centos
