@@ -37,11 +37,6 @@ Host gc-kube1
 Host gc-kube2
   Hostname 35.185.236.160 
 
-Host aws-kube
-  Hostname 13.112.5.239
-  User ec2-user
-  IdentityFile /home/cyen/.ssh/findtokyo.pem
-
 Host vpn-client-01
   Hostname vpn-client-01.cloud.phx3.gdg
 Host vpn-client-02
@@ -65,8 +60,8 @@ Host find-kube03
 
 Host aws-kube
   User centos
-  IdentityFile ~/.ssh/findoregon.pem
-  Hostname 35.166.172.250
+  IdentityFile ~/.ssh/findtokyo.pem
+  Hostname 52.193.103.96
 
 Host crdb1
   Hostname crdb1.cloud.phx3.gdg
