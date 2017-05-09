@@ -7,13 +7,14 @@ tmux new-window -t "ha-redis:1" -n "ha-redis02"  "ssh ha-redis02"
 for i in cwy-dev buck01 buck02 buck03 buck04 buck05 buck06 buck07 buck08 \
   buck09 buck10 ash01 ash02 ash03 ash04 ash05 ash06 dev03 mesa01 build \
 unstable dashboard find-zone find-graphite find-dashboard1 find-log \
-deploy
+deploy codecamp
 do
 tmux new-session -d -s "$i" "ssh $i"
 tmux new-window -t "$i:1" "ssh $i"
 tmux new-window -t "$i:2" "ssh $i"
 tmux new-window -t "$i:3" "ssh $i"
 done
+
 
 tmux new-session -d -s "kube" -n "kube1" "ssh find-kube01"
 tmux new-window -t "kube:1" -n "kube2" "ssh find-kube02"
@@ -41,6 +42,12 @@ do
 
   fi
 done
+
+tmux new-session -d -s "vpn" -n "vpn1" "ssh vpn-client-01"
+tmux new-window -t "vpn:1" -n "vpn2" "ssh vpn-client-02"
+tmux new-window -t "vpn:2" -n "vpn3" "ssh vpn-client-03"
+tmux new-window -t "vpn:3" -n "vpn4" "ssh vpn-client-04"
+
 tmux new-session -d -s "cassandra" -n "cassandra1" "ssh cassandra1"
 tmux new-window -t "cassandra:1" -n "cassandra2" "ssh cassandra2"
 tmux new-window -t "cassandra:2" -n "cassandra3" "ssh cassandra3"

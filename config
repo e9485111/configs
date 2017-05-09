@@ -365,13 +365,13 @@ Host keynode02
 Host keynode03
   HostName key-node-03.cloud.dev.phx3.gdg
 Host key-single-01
-  HostName key-single-01.cloud.dev.phx3.gdg
+  HostName key-single-01.cloud.phx3.gdg
 Host key-single-02
-  HostName key-single-02.cloud.dev.phx3.gdg
+  HostName key-single-02.cloud.phx3.gdg
 Host key-single-03
-  HostName key-single-03.cloud.dev.phx3.gdg
+  Hostname key-single-03.cloud.iad2.gdg
 Host key-single-04
-  HostName key-single-04.cloud.dev.phx3.gdg
+  HostName key-single-04.cloud.iad2.gdg
 Host whois
   HostName whois.cloud.dev.phx3.gdg
 Host whois01
