@@ -26,6 +26,8 @@ Host vpn-server
 
 ##################
 
+Host codecamp
+  Hostname  10.32.57.0
 Host cwy
   Hostname 10.22.181.250
 Host cwy-dev
@@ -71,7 +73,7 @@ Host aws-vpn
 Host aws-kube3
   User centos
   IdentityFile ~/.ssh/findtokyo.pem
-  Hostname 52.192.156.68
+  Hostname 13.113.114.251
 
 Host aws-kube2
   User centos
