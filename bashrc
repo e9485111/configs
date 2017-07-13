@@ -53,10 +53,7 @@ then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-function parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')\[\033[00m\] $ "
+export PS1="\u@\h ${GREEN}\w${YELLOW}\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')${BLUE}\$(k config get-contexts 2>/dev/null|grep \\*|awk '{print \"(\" \$2 \")\"}')${NORMAL} $ "
 export JAVA_HOME=/opt/jdk1.8.0_101
 
 jport() {
