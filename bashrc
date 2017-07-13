@@ -53,6 +53,11 @@ then
   eval "$(pyenv virtualenv-init -)"
 fi
 
+NORMAL="\[\033[00m\]"
+BLUE="\[\033[01;34m\]"
+YELLOW="\[\033[33m\]"
+LIGHTGREEN="\[\e[1;32m\]"
+GREEN="\[\033[32m\]"
 export PS1="\u@\h ${GREEN}\w${YELLOW}\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')${BLUE}\$(k config get-contexts 2>/dev/null|grep \\*|awk '{print \"(\" \$2 \")\"}')${NORMAL} $ "
 export JAVA_HOME=/opt/jdk1.8.0_101
 
