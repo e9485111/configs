@@ -12,6 +12,9 @@ Host gcwy
 Host find-graphite
   Hostname find-graphite.cloud.phx3.gdg
 
+Host logging-asia
+  Hostname 35.189.160.235
+
 Host consul1
   Hostname 10.138.254.6
 Host consul2
@@ -26,6 +29,8 @@ Host vpn-server
 
 ##################
 
+Host tf-grafana
+  Hostname  tf-grafana.cloud.phx3.gdg
 Host codecamp
   Hostname  10.32.57.0
 Host cwy
@@ -47,6 +52,10 @@ Host vpn-client-03
   Hostname vpn-client-03.cloud.phx3.gdg
 Host vpn-client-04
   Hostname 10.32.11.188
+Host vpn-client-05
+  Hostname 10.36.158.206
+Host vpn-client-06
+  Hostname vpn-client-06.cloud.phx3.gdg
 
 Host find-log
   Hostname find-log.cloud.phx3.gdg
@@ -59,6 +68,11 @@ Host find-kube02
   Hostname find-kube02.cloud.phx3.gdg
 Host find-kube03
   Hostname find-kube03.cloud.phx3.gdg
+
+Host acwy
+  User centos
+  IdentityFile ~/.ssh/cwy.pem
+  Hostname 52.53.128.116
 
 Host aws-kube-server
   User centos
@@ -160,6 +174,52 @@ Host deploy
   HostName deploy.cloud.phx3.gdg
 Host hmaster
   HostName p3plpashl01.prod.phx3.gdg
+
+Host find-es-cli01
+  HostName find-es-cli01.cloud.phx3.gdg
+Host find-es-cli02
+  HostName find-es-cli02.cloud.phx3.gdg
+Host find-es-data01
+  HostName find-es-data01.cloud.phx3.gdg
+Host find-es-data02
+  HostName find-es-data02.cloud.phx3.gdg
+Host find-es-data03
+  HostName find-es-data03.cloud.phx3.gdg
+Host find-es-data04
+  HostName find-es-data04.cloud.phx3.gdg
+Host find-es-mas01
+  HostName find-es-mas01.cloud.phx3.gdg
+Host find-es-mas02
+  HostName find-es-mas02.cloud.phx3.gdg
+Host find-es-mas03
+  HostName find-es-mas03.cloud.phx3.gdg
+
+Host k1
+  HostName 81.21.66.1
+Host k2
+  HostName 81.21.66.2
+Host k3
+  HostName 81.21.66.3
+Host k4
+  HostName 81.21.66.4
+Host k5
+  HostName 81.21.66.5
+Host k6
+  HostName 81.21.66.6
+Host k7
+  HostName 81.21.66.7
+Host k8
+  HostName 81.21.66.8
+
+Host cassandra1
+  HostName cassandra1.cloud.phx3.gdg
+Host cassandra2
+  HostName cassandra2.cloud.phx3.gdg
+Host cassandra3
+  HostName cassandra3.cloud.phx3.gdg
+Host cassandra4
+  HostName cassandra4.cloud.iad2.gdg
+Host cassandra5
 
 Host cassandra1
   HostName cassandra1.cloud.phx3.gdg
