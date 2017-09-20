@@ -73,7 +73,6 @@ Host find-kube03
 
 Host acwy
   User centos
-  IdentityFile ~/.ssh/cwy.pem
   Hostname 52.53.128.116
 
 Host aws-kube-server
