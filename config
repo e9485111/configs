@@ -56,6 +56,8 @@ Host vpn-client-05
   Hostname 10.36.158.206
 Host vpn-client-06
   Hostname vpn-client-06.cloud.phx3.gdg
+Host vpn-client-07
+  Hostname vpn-client-07.cloud.phx3.gdg
 
 Host find-log
   Hostname find-log.cloud.phx3.gdg
