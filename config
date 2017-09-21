@@ -73,17 +73,21 @@ Host find-kube03
 
 Host acwy
   User centos
-  Hostname 52.53.128.116
+  Hostname 13.56.245.184
+
+Host aws-vpn
+  User centos
+  Hostname 52.52.28.42
 
 Host aws-kube-server
   User centos
   IdentityFile ~/.ssh/findtokyo.pem
   Hostname 52.199.72.234
 
-Host aws-vpn
-  User centos
-  IdentityFile ~/.ssh/findtokyo.pem
-  Hostname 54.65.8.185
+#Host aws-vpn
+#  User centos
+#  IdentityFile ~/.ssh/findtokyo.pem
+#  Hostname 54.65.8.185
 
 Host aws-kube3
   User centos
