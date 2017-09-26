@@ -17,4 +17,6 @@ rm ~/split.sh
 ln -s ~/configs/split.sh ~/split.sh
 rm ~/percentile.sh
 ln -s ~/configs/percentile.sh ~/percentile.sh
+ln -fs ~/configs/tmux_sessions.sh ~/tmux_sessions.sh
+ln -fs ~/configs/tmux_g_sessions.sh ~/tmux_g_sessions.sh
 chmod go-w ~/.ssh/config
