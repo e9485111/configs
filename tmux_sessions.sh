@@ -6,14 +6,15 @@ tmux new-window -t "ha-redis:1" -n "ha-redis02"  "ssh ha-redis02"
 
 for i in cwy-dev buck01 buck02 buck03 buck04 buck05 buck06 buck07 buck08 \
   buck09 buck10 ash01 ash02 ash03 ash04 ash05 ash06 dev03 mesa01 build \
-unstable dashboard find-zone find-graphite find-dashboard1 find-log \
-deploy
+unstable dashboard find-zone find-graphite find-dashboard1 find-log build \
+deploy key-single-01 k1
 do
 tmux new-session -d -s "$i" "ssh $i"
 tmux new-window -t "$i:1" "ssh $i"
 tmux new-window -t "$i:2" "ssh $i"
 tmux new-window -t "$i:3" "ssh $i"
 done
+
 
 tmux new-session -d -s "kube" -n "kube1" "ssh find-kube01"
 tmux new-window -t "kube:1" -n "kube2" "ssh find-kube02"
@@ -41,6 +42,24 @@ do
 
   fi
 done
+
+
+tmux new-session -d -s "es" -n "es-cli01" "ssh find-es-cli01"
+tmux new-window -t "es:1" -n "es-cli02" "ssh find-es-cli02"
+tmux new-window -t "es:2" -n "es-data01" "ssh find-es-data01"
+tmux new-window -t "es:3" -n "es-data02" "ssh find-es-data02"
+tmux new-window -t "es:4" -n "es-data03" "ssh find-es-data03"
+tmux new-window -t "es:5" -n "es-mas01" "ssh find-es-mas01"
+tmux new-window -t "es:6" -n "es-mas02" "ssh find-es-mas02"
+tmux new-window -t "es:7" -n "es-mas03" "ssh find-es-mas03"
+
+tmux new-session -d -s "vpn" -n "vpn1" "ssh vpn-client-01"
+tmux new-window -t "vpn:1" -n "vpn2" "ssh vpn-client-02"
+tmux new-window -t "vpn:2" -n "vpn3" "ssh vpn-client-03"
+tmux new-window -t "vpn:3" -n "vpn4" "ssh vpn-client-04"
+tmux new-window -t "vpn:4" -n "vpn5" "ssh vpn-client-05"
+tmux new-window -t "vpn:5" -n "vpn6" "ssh vpn-client-06"
+
 tmux new-session -d -s "cassandra" -n "cassandra1" "ssh cassandra1"
 tmux new-window -t "cassandra:1" -n "cassandra2" "ssh cassandra2"
 tmux new-window -t "cassandra:2" -n "cassandra3" "ssh cassandra3"
@@ -61,23 +80,6 @@ tmux new-window -t "cassandra2:5" -n "cassandra12" "ssh cassandra12"
 tmux new-window -t "cassandra2:7" -n "all"
 tmux send-key -t "cassandra2:7"  "~/split.sh cassandra 7 8 9 10 11 12" ENTER
 
-
-#exists=`tmux list-windows -t cassandra2|grep 8:\ all`
-#if [[ -z "$exists" ]];
-#then
-#  tmux new-window -t "cassandra2:8" -n "all"
-#  tmux splitw -t "cassandra2:8"  -h -p 33
-#  tmux splitw -t "cassandra2:8.0" -h -p 50
-#  tmux splitw -t "cassandra2:8.0" -v -p 50
-#  tmux splitw -t "cassandra2:8.2" -v -p 50
-#  tmux splitw -t "cassandra2:8.4" -v -p 50
-#  tmux send-key -t "cassandra2:8.0" "ssh cassandra7" ENTER
-#  tmux send-key -t "cassandra2:8.1" "ssh cassandra10" ENTER
-#  tmux send-key -t "cassandra2:8.2" "ssh cassandra8" ENTER
-#  tmux send-key -t "cassandra2:8.3" "ssh cassandra11" ENTER
-#  tmux send-key -t "cassandra2:8.4" "ssh cassandra9" ENTER
-#  tmux send-key -t "cassandra2:8.5" "ssh cassandra12" ENTER
-#fi
 
 tmux new-session -d -s "crdb" -n "crdb1" "ssh crdb1"
 tmux new-window -t "crdb:1" -n "crdb2" "ssh crdb2"

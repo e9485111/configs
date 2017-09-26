@@ -24,9 +24,15 @@ alias tf='tail -f'
 alias vi='vim'
 alias hi='history'
 alias du1='du -h --max-depth=1'
-alias k='kubectl'
 alias d='docker'
-
+alias k="kubectl"
+alias kd="kubectl describe"
+alias kg="kubectl get"
+alias kc="kubectl create"
+alias kdel="kubectl delete"
+alias ke="kubectl exec -it"
+alias kdes="kubectl describe"
+alias kl="kubectl logs"
 tg() { tail -f $1|grep -P "$2"; }
 
 SSH_ENV=$HOME/.ssh/environment
@@ -47,10 +53,12 @@ then
   eval "$(pyenv virtualenv-init -)"
 fi
 
-function parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')\[\033[00m\] $ "
+NORMAL="\[\033[00m\]"
+BLUE="\[\033[01;34m\]"
+YELLOW="\[\033[33m\]"
+LIGHTGREEN="\[\e[1;32m\]"
+GREEN="\[\033[32m\]"
+export PS1="\u@\h ${GREEN}\w${YELLOW}\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')${BLUE}\$(k config get-contexts 2>/dev/null|grep \\*|awk '{print \"(\" \$2 \")\"}')${NORMAL} $ "
 export JAVA_HOME=/opt/jdk1.8.0_101
 
 jport() {
