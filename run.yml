@@ -19,6 +19,9 @@
       local_action: shell scp -r -o "StrictHostKeyChecking no" ~/.ssh {{inventory_hostname}}:~/
       ignore_errors: no
 
+    - name: tree
+      action: yum name=tree
+      become: true
     - name: ctags
       action: yum name=ctags
       become: true
