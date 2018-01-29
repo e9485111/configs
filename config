@@ -72,8 +72,9 @@ Host find-kube03
   Hostname find-kube03.cloud.phx3.gdg
 
 Host acwy
-  User centos
-  Hostname 13.56.245.184
+  Hostname 13.57.228.160
+  #User centos
+  #Hostname 13.56.245.184
 
 Host aws-vpn
   User centos
@@ -177,6 +178,8 @@ Host ash06
   HostName a2plfinddev06.prod.iad2.gdg
 Host deploy
   HostName deploy.cloud.phx3.gdg
+Host deploy2
+  HostName deploy2.cloud.phx3.gdg
 Host hmaster
   HostName p3plpashl01.prod.phx3.gdg
 
