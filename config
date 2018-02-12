@@ -60,6 +60,7 @@ Host find-log
 Host find-registry
   Hostname find-registry.cloud.phx3.gdg
 
+
 Host find-kube01
   Hostname find-kube01.cloud.phx3.gdg
 Host find-kube02
