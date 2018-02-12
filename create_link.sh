@@ -19,4 +19,5 @@ rm ~/percentile.sh
 ln -s ~/configs/percentile.sh ~/percentile.sh
 ln -fs ~/configs/tmux_sessions.sh ~/tmux_sessions.sh
 ln -fs ~/configs/tmux_g_sessions.sh ~/tmux_g_sessions.sh
+ln -fs ~/configs/pp ~/pp
 chmod go-w ~/.ssh/config
