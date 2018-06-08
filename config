@@ -27,6 +27,8 @@ Host consul4
 Host vpn-server
   Hostname 35.185.241.207
 
+Host dcc-data-pipe
+  Hostname dcc-data-pipe.cloud.phx3.gdg
 ##################
 
 Host cwy
@@ -192,6 +194,8 @@ Host find-es-data03
   HostName find-es-data03.cloud.phx3.gdg
 Host find-es-data04
   HostName find-es-data04.cloud.phx3.gdg
+Host find-es-data05
+  HostName find-es-data05.cloud.phx3.gdg
 
 Host find-es-mas01
   HostName find-es-mas01.cloud.phx3.gdg
