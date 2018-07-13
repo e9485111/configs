@@ -8,6 +8,12 @@ tmux new-window -n "$1"
 max=`tmux list-window|tail -n -1|grep -oP "^\d+"`
 next=$((max))
 
+if [ $total_pane -eq 2 ];
+then
+  tmux splitw -t "$next"  -h -p 50
+  tmux send-key -t "$next.0" "ssh $1$2" ENTER
+  tmux send-key -t "$next.1" "ssh $1$3" ENTER
+fi
 if [ $total_pane -eq 3 ];
 then
   tmux splitw -t "$next"  -v -p 50
