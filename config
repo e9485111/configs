@@ -8,6 +8,11 @@ Host janus2
 Host janus3
   Hostname 54.183.157.126
 
+Host squid1
+  Hostname squid-find-01.cloud.phx3.gdg
+Host squid2
+  Hostname squid-find-02.cloud.phx3.gdg
+
 ##google below
 Host jenkins
   Hostname 10.138.254.19
