@@ -57,12 +57,10 @@ Host consul4
 Host vpn-server
   Hostname 10.138.254.3
 
+Host dcc-data-pipe
+  Hostname dcc-data-pipe.cloud.phx3.gdg
 ##################
 
-Host tf-grafana
-  Hostname  tf-grafana.cloud.phx3.gdg
-Host codecamp
-  Hostname  10.32.57.0
 Host cwy
   Hostname 10.22.181.250
 Host cwy-dev
@@ -94,6 +92,7 @@ Host find-log
 Host find-registry
   Hostname find-registry.cloud.phx3.gdg
 
+
 Host find-kube01
   Hostname find-kube01.cloud.phx3.gdg
 Host find-kube02
@@ -102,8 +101,9 @@ Host find-kube03
   Hostname find-kube03.cloud.phx3.gdg
 
 Host acwy
-  User centos
-  Hostname 13.56.245.184
+  Hostname 13.57.228.160
+  #User centos
+  #unknown server --> Hostname 13.56.245.184
 
 Host aws-vpn
   User centos
@@ -114,10 +114,10 @@ Host aws-kube-server
   IdentityFile ~/.ssh/findtokyo.pem
   Hostname 52.199.72.234
 
-#Host aws-vpn
-#  User centos
-#  IdentityFile ~/.ssh/findtokyo.pem
-#  Hostname 54.65.8.185
+Host aws-vpn-tokyo
+  User centos
+  IdentityFile ~/.ssh/findtokyo.pem
+  Hostname 54.65.8.185
 
 Host aws-kube3
   User centos
@@ -207,6 +207,8 @@ Host ash06
   HostName a2plfinddev06.prod.iad2.gdg
 Host deploy
   HostName deploy.cloud.phx3.gdg
+Host deploy2
+  HostName deploy2.cloud.phx3.gdg
 Host hmaster
   HostName p3plpashl01.prod.phx3.gdg
 
@@ -222,6 +224,8 @@ Host find-es-data03
   HostName find-es-data03.cloud.phx3.gdg
 Host find-es-data04
   HostName find-es-data04.cloud.phx3.gdg
+Host find-es-data05
+  HostName find-es-data05.cloud.phx3.gdg
 
 Host find-es-mas01
   HostName find-es-mas01.cloud.phx3.gdg
