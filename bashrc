@@ -119,5 +119,3 @@ if [ -f '/home/cyen/google-cloud-sdk/path.bash.inc' ]; then source '/home/cyen/g
 
 # The next line enables shell command completion for gcloud.
 #if [ -f '/home/cyen/google-cloud-sdk/completion.bash.inc' ]; then source '/home/cyen/google-cloud-sdk/completion.bash.inc'; fi
-. $HOME/.asdf/asdf.sh
-. $HOME/.asdf/completions/asdf.bash
