@@ -5,12 +5,14 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+Plugin 'scrooloose/nerdtree'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'L9'
 Plugin 'kien/ctrlp.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'elixir-editors/vim-elixir'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -36,6 +38,10 @@ set hlsearch
 set nobackup
 set nowb
 set noswapfile
+
+"open nerdtree when no file is specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "remove trailing whitespace on save
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.js :%s/\s\+$//e

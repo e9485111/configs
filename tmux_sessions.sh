@@ -7,7 +7,7 @@ tmux new-window -t "ha-redis:1" -n "ha-redis02"  "ssh ha-redis02"
 for i in cwy-dev buck01 buck02 buck03 buck04 buck05 buck06 buck07 buck08 \
   buck09 buck10 ash01 ash02 ash03 ash04 ash05 ash06 dev03 mesa01 build \
 unstable dashboard find-zone find-graphite find-dashboard1 find-log build \
-deploy key-single-01 k1
+deploy deploy2 key-single-01 k1
 do
 tmux new-session -d -s "$i" "ssh $i"
 tmux new-window -t "$i:1" "ssh $i"
@@ -49,9 +49,11 @@ tmux new-window -t "es:1" -n "es-cli02" "ssh find-es-cli02"
 tmux new-window -t "es:2" -n "es-data01" "ssh find-es-data01"
 tmux new-window -t "es:3" -n "es-data02" "ssh find-es-data02"
 tmux new-window -t "es:4" -n "es-data03" "ssh find-es-data03"
-tmux new-window -t "es:5" -n "es-mas01" "ssh find-es-mas01"
-tmux new-window -t "es:6" -n "es-mas02" "ssh find-es-mas02"
-tmux new-window -t "es:7" -n "es-mas03" "ssh find-es-mas03"
+tmux new-window -t "es:5" -n "es-data04" "ssh find-es-data04"
+tmux new-window -t "es:6" -n "es-data05" "ssh find-es-data05"
+tmux new-window -t "es:7" -n "es-mas01" "ssh find-es-mas01"
+tmux new-window -t "es:8" -n "es-mas02" "ssh find-es-mas02"
+tmux new-window -t "es:9" -n "es-mas03" "ssh find-es-mas03"
 
 tmux new-session -d -s "vpn" -n "vpn1" "ssh vpn-client-01"
 tmux new-window -t "vpn:1" -n "vpn2" "ssh vpn-client-02"
@@ -59,6 +61,7 @@ tmux new-window -t "vpn:2" -n "vpn3" "ssh vpn-client-03"
 tmux new-window -t "vpn:3" -n "vpn4" "ssh vpn-client-04"
 tmux new-window -t "vpn:4" -n "vpn5" "ssh vpn-client-05"
 tmux new-window -t "vpn:5" -n "vpn6" "ssh vpn-client-06"
+tmux new-window -t "vpn:6" -n "vpn7" "ssh vpn-client-07"
 
 tmux new-session -d -s "cassandra" -n "cassandra1" "ssh cassandra1"
 tmux new-window -t "cassandra:1" -n "cassandra2" "ssh cassandra2"

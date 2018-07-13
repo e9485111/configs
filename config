@@ -1,19 +1,55 @@
 Host *
     StrictHostKeyChecking no
 
+Host janus
+  Hostname 54.193.121.130
+Host janus2
+  Hostname 52.53.95.5
+Host janus3
+  Hostname 54.183.157.126
 
 ##google below
 Host jenkins
   Hostname 10.138.254.19
+Host jenkins-asia
+  Hostname 10.138.253.6
 Host logging
   Hostname 10.138.254.16
 Host gcwy
   Hostname 35.185.202.141 
+Host es
+  Hostname 10.138.254.30
+Host elk
+  Hostname 10.138.250.24
+Host haproxy-cert
+  Hostname 10.138.254.28
+Host logging-europe
+  Hostname 10.138.251.9
+Host logging-asia
+  Hostname 10.138.253.9
+Host logging-useast-jenkins
+  Hostname 10.138.252.2
+Host gcp-logging-useast
+  Hostname 35.229.30.53
+Host graphite
+  Hostname 10.138.254.27
 Host find-graphite
   Hostname find-graphite.cloud.phx3.gdg
 
+Host domains-dashboard
+  Hostname 35.233.189.174
+
 Host logging-asia
   Hostname 35.189.160.235
+
+Host gpu1
+  Hostname 35.197.3.134 
+Host gpu2
+  Hostname 35.227.184.179
+Host gpu11
+  Hostname 35.231.142.78 
+Host gpu12
+  Hostname 35.231.49.129
 
 Host consul1
   Hostname 10.138.254.6
@@ -25,14 +61,12 @@ Host consul4
   Hostname 10.138.254.9
 
 Host vpn-server
-  Hostname 35.185.241.207
+  Hostname 10.138.254.3
 
+Host dcc-data-pipe
+  Hostname dcc-data-pipe.cloud.phx3.gdg
 ##################
 
-Host tf-grafana
-  Hostname  tf-grafana.cloud.phx3.gdg
-Host codecamp
-  Hostname  10.32.57.0
 Host cwy
   Hostname 10.22.181.250
 Host cwy-dev
@@ -64,6 +98,7 @@ Host find-log
 Host find-registry
   Hostname find-registry.cloud.phx3.gdg
 
+
 Host find-kube01
   Hostname find-kube01.cloud.phx3.gdg
 Host find-kube02
@@ -74,7 +109,6 @@ Host find-kube03
 Host acwy
   Hostname 13.57.228.160
   #User centos
-  #Hostname 13.56.245.184
 
 Host aws-vpn
   User centos
@@ -85,10 +119,10 @@ Host aws-kube-server
   IdentityFile ~/.ssh/findtokyo.pem
   Hostname 52.199.72.234
 
-#Host aws-vpn
-#  User centos
-#  IdentityFile ~/.ssh/findtokyo.pem
-#  Hostname 54.65.8.185
+Host aws-vpn-tokyo
+  User centos
+  IdentityFile ~/.ssh/findtokyo.pem
+  Hostname 54.65.8.185
 
 Host aws-kube3
   User centos
@@ -195,6 +229,8 @@ Host find-es-data03
   HostName find-es-data03.cloud.phx3.gdg
 Host find-es-data04
   HostName find-es-data04.cloud.phx3.gdg
+Host find-es-data05
+  HostName find-es-data05.cloud.phx3.gdg
 
 Host find-es-mas01
   HostName find-es-mas01.cloud.phx3.gdg
@@ -248,6 +284,8 @@ Host cassandra8
   HostName cassandra8.cloud.phx3.gdg
 Host cassandra9
   HostName cassandra9.cloud.phx3.gdg
+Host cassandra9-1
+  HostName cassandra9-1.cloud.phx3.gdg
 Host cassandra10
   HostName cassandra10.cloud.iad2.gdg
 Host cassandra11

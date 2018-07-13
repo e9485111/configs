@@ -1,3 +1,4 @@
+[run]
 find-log
 find-kube01
 find-kube02
@@ -72,6 +73,10 @@ find-es-cli01
 find-es-cli02
 find-es-data01
 find-es-data02
+find-es-data03
+find-es-data04
 find-es-mas01
 find-es-mas02
 find-es-mas03
+35.185.241.207
+35.185.202.141 
