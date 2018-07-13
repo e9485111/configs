@@ -31,8 +31,10 @@ alias kg="kubectl get"
 alias kc="kubectl create"
 alias kdel="kubectl delete"
 alias ke="kubectl exec -it"
-alias kdes="kubectl describe"
 alias kl="kubectl logs"
+alias kgg="kubectl get pod|grep "
+alias kggs="kubectl get svc|grep "
+
 tg() { tail -f $1|grep -P "$2"; }
 
 SSH_ENV=$HOME/.ssh/environment
@@ -58,7 +60,8 @@ BLUE="\[\033[01;34m\]"
 YELLOW="\[\033[33m\]"
 LIGHTGREEN="\[\e[1;32m\]"
 GREEN="\[\033[32m\]"
-export PS1="\u@\h ${GREEN}\w${YELLOW}\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')${BLUE}\$(k config get-contexts 2>/dev/null|grep \\*|awk '{print \"(\" \$2 \")\"}')${NORMAL} $ "
+
+export PS1="\u@g\h ${GREEN}\w${YELLOW}\$(git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/')${BLUE}\$(k config get-contexts 2>/dev/null|grep \\*|awk '{print \"(\" \$2 \")\"}')${NORMAL} $ "
 export JAVA_HOME=/opt/jdk1.8.0_101
 
 jport() {
@@ -108,3 +111,9 @@ jin() {
        echo
    done
 }
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/cyen/google-cloud-sdk/path.bash.inc' ]; then source '/home/cyen/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+#if [ -f '/home/cyen/google-cloud-sdk/completion.bash.inc' ]; then source '/home/cyen/google-cloud-sdk/completion.bash.inc'; fi
