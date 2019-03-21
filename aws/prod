@@ -1,0 +1,1 @@
+aws-okta-processor authenticate -e -o godaddy.okta.com -r arn:aws:iam::538333841962:role/GD-AWS-USA-CPO-DomainFind-Prod-Deploy -a https://godaddy.okta.com/home/amazon_aws/0oakmpp1rkb2ZuZsQ0x7/272  -k random_key4 -u 02d128478zgeeA

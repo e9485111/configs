@@ -8,6 +8,8 @@ fi
 # User specific aliases and functions
 alias grep='grep --color'
 alias less='less -MSr'
+alias ls='ls -G'
+alias ll='ls -l'
 alias lh='ls -lh'
 alias lg='ll|grep'
 alias la='ll -a'
@@ -27,6 +29,9 @@ alias du1='du -h --max-depth=1'
 alias d='docker'
 alias k="kubectl"
 alias kd="kubectl describe"
+alias kpf="kubectl port-forward"
+alias kuc="kubectl config use-context"
+alias kgc="kubectl config get-contexts"
 alias kg="kubectl get"
 alias kc="kubectl create"
 alias kdel="kubectl delete"
@@ -46,7 +51,7 @@ alias gdf='git diff'
 export VISUAL=vim
 export GOPATH=/home/cyen/go
 
-eval "$(fasd --init auto)"
+export PATH="/home/cyen/.pyenv/bin:$HOME/bin:$PATH"
 
 export PATH="/home/cyen/.pyenv/bin:$PATH"
 
