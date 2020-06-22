@@ -15,6 +15,7 @@ config resizePercentOf screenSize
 alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
 alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
 alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias right66p move screenOriginX+screenSizeX/3screenOriginY screenSizeX*2/3;screenSizeY
 alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
 alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
 alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
@@ -60,3 +61,10 @@ bind -:${h2}        resize +0 -5%
 
 bind left:${h3} ${moveleft}
 bind right:${h3} ${moveright}
+
+#test
+layout myLayout 'iTerm2' ${right66p}
+layout myLayout 'Google Chrome' ${lefthalf}
+layout myLayout 'Google Chrome' ${lefthalf}
+layout myLayout 'Google Chrome' ${lefthalf}
+bind 1:${hyper} layout myLayout
